@@ -1,117 +1,153 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Mawarits Syariah — Solusi Perhitungan Waris Otomatis</title>
+    <title>Kalkulator Mawarist Syariah - Aplikasi Faraid | ASLAM DigiArtha</title>
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Konfigurasi Tailwind Khas ASLAM DigiArtha -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { DEFAULT: '#059669', light: '#10b981', dark: '#064e3b' },
-                        secondary: { DEFAULT: '#d9a441', light: '#eac069', dark: '#b3832c' },
-                        dark: '#1e293b',
-                        light: '#f4f6f8',
-                        line: '#e2e8f0'
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        heading: ['Plus Jakarta Sans', 'sans-serif'] 
                     },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(5, 150, 105, 0.1)',
-                        'glow': '0 0 20px rgba(16, 185, 129, 0.4)',
+                    colors: {
+                        aslam: { gold: '#d4a038', goldLight: '#f9f0db', goldDark: '#a6791e', green: '#034f46', greenMid: '#047857', greenLight: '#10b981' }
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-aslam-gradient { background: linear-gradient(135deg, #023b34 0%, #034f46 55%, #b8862d 100%); }
+        .bg-aslam-button { background: linear-gradient(135deg, #034f46 0%, #057a68 65%, #c5922e 100%); }
+        .bg-aslam-button:hover { background: linear-gradient(135deg, #023831 0%, #046354 60%, #b07f21 100%); }
+        .text-aslam-gradient { background: linear-gradient(135deg, #034f46 0%, #059669 45%, #d4a038 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dark .text-aslam-gradient { background: linear-gradient(135deg, #34d399 0%, #fbbf24 55%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .border-aslam-glow:hover { border-color: #d4a038; box-shadow: 0 20px 25px -5px rgba(3, 79, 70, 0.14), 0 8px 10px -6px rgba(212, 160, 56, 0.12); }
+    </style>
 </head>
-<body class="font-sans bg-light text-dark antialiased selection:bg-primary selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-[#034f46] selection:text-white transition-colors duration-300" id="bodyRoot">
 
-    <!-- 1. Header / Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-line transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="text-xl font-black text-primary-dark"><i class="fas fa-book-quran mr-2 text-primary"></i>Mawarits <span class="text-secondary">Syariah</span></span>
-                </div>
+    <!-- Top Guarantee Bar -->
+    <div class="bg-gradient-to-r from-[#022c26] via-[#034f46] to-[#022c26] text-white py-2.5 px-4 text-center text-xs sm:text-sm font-medium shadow-md flex items-center justify-center space-x-2 border-b border-[#d4a038]/30">
+        <i class="fas fa-crown text-[#f3c663] animate-bounce"></i>
+        <span><strong>Garansi Resmi ASLAM DigiArtha:</strong> Unduh instan 24 jam via <strong>Mayar.id / Lynk.id</strong> & jaminan <strong>100% syar'i & presisi</strong>.</span>
+    </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center text-sm font-semibold">
-                    <a href="#fitur" class="text-gray-600 hover:text-primary transition-colors">Fitur Utama</a>
-                    <a href="#keunggulan" class="text-gray-600 hover:text-primary transition-colors">Keunggulan Faraidh</a>
-                    <a href="#harga" class="text-gray-600 hover:text-primary transition-colors">Pilihan Varian</a>
-                    <a href="index.html" class="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2.5 rounded-xl transition">← Kembali ke Toko Utama</a>
+    <!-- Header / Navigation -->
+    <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 sticky top-0 z-40 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
+            <!-- Logo ASLAM -->
+            <a href="index.html" class="flex items-center group focus:outline-none flex-shrink-0" title="Kembali ke ASLAM DigiArtha">
+                <div class="bg-white px-3.5 py-1.5 rounded-2xl border border-slate-200/90 dark:border-[#d4a038]/40 shadow-sm flex items-center transition duration-300 group-hover:border-[#034f46] group-hover:shadow-md">
+                    <div class="flex items-center space-x-3 py-0.5">
+                        <div class="flex flex-col justify-center leading-none pr-1">
+                            <div class="text-base sm:text-xl font-extrabold tracking-tight flex items-center space-x-1.5"><span class="text-[#034f46] font-black">ASLAM</span><span class="text-[#d4a038] font-medium">DigiArtha</span></div>
+                            <div class="w-full h-[1.5px] bg-gradient-to-r from-[#d4a038] via-[#d4a038] to-transparent my-1"></div>
+                            <span class="text-[8px] sm:text-[9px] tracking-[0.22em] text-[#034f46] font-bold uppercase">Mawarist Syariah</span>
+                        </div>
+                    </div>
                 </div>
+            </a>
 
-                <div class="flex items-center">
-                    <a href="#harga" class="bg-primary hover:bg-primary-light text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition">Pesan Sekarang</a>
-                </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                <a href="#fitur" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition flex items-center space-x-1.5"><i class="fas fa-star text-xs text-[#d4a038]"></i><span>Fitur Utama</span></a>
+                <a href="#keunggulan" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Keunggulan</a>
+                <a href="#harga" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Varian & Harga</a>
+                <a href="index.html" class="hover:text-rose-600 dark:hover:text-rose-400 transition flex items-center space-x-1"><i class="fas fa-arrow-left text-rose-600"></i><span>Kembali ke Katalog</span></a>
+            </nav>
+
+            <div class="flex items-center space-x-2.5 sm:space-x-3">
+                <button onclick="toggleDarkMode()" id="modeToggleBtn" class="bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 text-[#034f46] dark:text-[#f3c663] border border-slate-200 dark:border-slate-700 p-2.5 rounded-xl transition flex items-center justify-center shadow-sm" title="Ubah Mode Tampilan">
+                    <i class="fas fa-moon text-base sm:text-lg" id="modeIcon"></i>
+                </button>
+                <a href="#harga" class="bg-aslam-button text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-lg shadow-[#034f46]/20 flex items-center space-x-2 border border-[#d4a038]/40">
+                    <i class="fas fa-shopping-cart text-[#fde08d]"></i>
+                    <span class="hidden sm:inline">Pesan Sekarang</span>
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- 2. Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="text-center lg:text-left z-10">
-                    <div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary-dark font-bold text-xs uppercase tracking-widest mb-6">
-                        ⚖️ Sesuai Kitab Al-Rahbiyah & Kompilasi Hukum Islam (KHI)
-                    </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-                        Selesaikan Pembagian Waris Akurat dengan <span class="text-primary">Mawarits Syariah</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Aplikasi hitung waris otomatis berbasis fikih faraidh klasik dan KHI. Dilengkapi mesin KPK, sistem 'Awl, Hajb otomatis, alokasi silih rido (hibah), hingga cetak Berita Acara Kesepakatan PDF[cite: 4].
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#harga" class="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg shadow-primary/30 transition-all text-center">
-                            Lihat Varian & Harga
-                        </a>
-                        <a href="#fitur" class="bg-white border-2 border-line hover:border-primary text-primary px-8 py-4 rounded-2xl font-bold text-lg transition-all text-center">
-                            Jelajahi Fitur
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50/70 via-white to-amber-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950/30 py-16 lg:py-28 px-4 sm:px-6 border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#034f46]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#d4a038]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2.5 bg-white dark:bg-slate-800/90 border border-[#d4a038]/50 shadow-sm px-4 py-1.5 rounded-full mb-6">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#034f46] to-[#d4a038] animate-ping"></span>
+                    <span class="text-xs font-bold text-[#034f46] dark:text-[#f3c663] uppercase tracking-wider">📚 Sesuai Syariat & Hukum Islam</span>
                 </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight text-slate-900 dark:text-white font-heading">
+                    Kalkulator Faraid <span class="text-aslam-gradient">Mawarist Syariah</span>
+                </h1>
+                
+                <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Aplikasi cerdas untuk mempermudah perhitungan pembagian harta warisan secara cepat, akurat, dan sesuai dengan syariat hukum Faraid Islam. Dilengkapi simulasi Aul, Radd, dan Wasiat.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#harga" class="bg-aslam-button text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-[#034f46]/25 hover:scale-[1.02] transition transform text-center text-sm sm:text-base flex items-center justify-center space-x-2.5 border border-[#d4a038]/40">
+                        <i class="fas fa-tags text-[#fde08d]"></i><span>Lihat Pilihan Harga</span>
+                    </a>
+                    <a href="#fitur" class="bg-white dark:bg-slate-800 border-2 border-[#d4a038]/60 dark:border-[#d4a038]/40 text-[#034f46] dark:text-white font-bold px-8 py-4 rounded-2xl hover:bg-amber-50/60 dark:hover:bg-slate-700 transition text-center text-sm sm:text-base shadow-sm flex items-center justify-center space-x-2">
+                        <i class="fas fa-layer-group text-[#d4a038]"></i><span>Pelajari Fitur Sistem</span>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Preview Mockup -->
-                <div class="relative z-10">
-                    <div class="relative rounded-3xl bg-white border border-line shadow-2xl p-6 overflow-hidden">
-                        <div class="flex items-center space-x-2 mb-4 pb-3 border-b border-line">
-                            <div class="w-3 h-3 rounded-full bg-rose-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-amber-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
-                            <span class="text-xs text-gray-400 font-mono ml-2">Mawarits-Syariah-Engine.app</span>
-                        </div>
-                        <div class="space-y-3 mb-6">
-                            <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-200">
-                                <span class="text-xs text-emerald-800 font-semibold">Total Harta Waris Bersih (Netto)</span>
-                                <h4 class="text-2xl font-black text-primary-dark mt-1">Rp 350.000.000</h4>
+            <!-- Preview Kotak Aplikasi / Dashboard Mockup -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-[#034f46] via-emerald-600 to-[#d4a038] rounded-[28px] blur-xl opacity-25"></div>
+                    <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-2xl p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-5 pb-4 border-b border-slate-100 dark:border-slate-800">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                                <span class="text-xs text-slate-500 font-mono ml-2 font-semibold">Mawarist-Syariah.app</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="bg-slate-50 p-3 rounded-xl border border-line">
-                                    <span class="text-[11px] text-gray-500 font-semibold">Asal Masalah (KPK)</span>
-                                    <h5 class="text-base font-bold text-gray-800 mt-0.5">KPK: 24 / 'Awl</h5>
-                                </div>
-                                <div class="bg-slate-50 p-3 rounded-xl border border-line">
-                                    <span class="text-[11px] text-gray-500 font-semibold">Status Alokasi</span>
-                                    <h5 class="text-base font-bold text-emerald-600 mt-0.5">✓ Saling Ridha (Pas)</h5>
-                                </div>
-                            </div>
+                            <span class="text-[10px] bg-[#034f46] text-[#fde08d] px-2 py-1 rounded-md font-bold uppercase">Pro Version</span>
                         </div>
-                        <div class="p-4 bg-primary/10 rounded-2xl text-xs text-primary-dark font-semibold text-center">
-                            ✓ Otomatisasi Hukum Faraidh & Validasi Ahli Waris Lengkap
+                        <div class="space-y-3">
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Total Tirkah (Harta)</span>
+                                <strong class="text-xl text-[#034f46] dark:text-emerald-400">Rp 500.000.000</strong>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Istri (1/8)</span>
+                                <strong class="text-xl text-[#d4a038] dark:text-amber-400">Rp 62.500.000</strong>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Anak Laki-laki ('Ashabah)</span>
+                                <strong class="text-xl text-[#034f46] dark:text-emerald-400">Rp 437.500.000</strong>
+                            </div>
+                            <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200/60 dark:border-emerald-800 text-xs text-[#034f46] dark:text-emerald-400 font-bold text-center flex items-center justify-center space-x-2 mt-4">
+                                <i class="fas fa-scale-balanced"></i>
+                                <span>Perhitungan Selesai & Syar'i</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,173 +155,163 @@
         </div>
     </section>
 
-    <!-- 3. Fitur Utama -->
-    <section id="fitur" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary text-xs font-bold uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full inline-block mb-3">Fitur Unggulan Faraidh</span>
-                <h2 class="text-3xl md:text-4xl font-black text-dark mb-4">Komputasi Waris Teliti Tanpa Khawatir Salah Hitung</h2>
-                <p class="text-gray-600 text-lg">Dirancang untuk memudahkan penghitungan hak waris secara adil sesuai koridor hukum Islam[cite: 4].</p>
+    <!-- Fitur Utama -->
+    <section id="fitur" class="py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="bg-amber-100/80 dark:bg-amber-950/60 text-[#9a6e1f] dark:text-amber-300 border border-amber-300/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Fitur Unggulan</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 font-heading">Pembagian Waris Jadi Lebih Mudah & Tepat</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Membantu masyarakat muslim, asatidz, dan tokoh agama dalam menyelesaikan persoalan waris tanpa khawatir salah hitung.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Mesin KPK & 'Awl Otomatis</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Menghitung pembagi terkecil (KPK) secara otomatis dan menangani kasus kenaikan saham ('awl) saat jumlah bagian melebihi kesatuan harta[cite: 4].</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Fitur 1 -->
+                <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#034f46] text-[#f3c663] rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#034f46]/20 group-hover:scale-110 transition"><i class="fas fa-calculator"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Algoritma Faraid Otomatis</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Menghitung porsi pasti (Dzawil Furudh) dan sisa harta ('Ashabah) secara otomatis berdasarkan ahli waris yang ditinggalkan.</p>
                 </div>
 
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Sistem Hajb (Penghadangan)</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Sistem secara otomatis menutup (menghilangkan hak) ahli waris yang terhalang oleh keberadaan ahli waris lain yang lebih dekat tingkatannya[cite: 4].</p>
+                <!-- Fitur 2 -->
+                <div class="bg-gradient-to-b from-amber-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-amber-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#d4a038] text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-amber-700/20 group-hover:scale-110 transition"><i class="fas fa-ban"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Deteksi Hijab (Penghalang)</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Sistem cerdas yang otomatis menggugurkan (mahjub) ahli waris tertentu jika terdapat ahli waris yang lebih dekat kekerabatannya.</p>
                 </div>
 
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Alokasi Fisik & Silih Rido</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Membantu memetakan pembagian aset fisik (tanah, rumah, kendaraan) ke masing-masing ahli waris lengkap dengan perhitungan selisih uang (nombok/susuk)[cite: 4].</p>
-                </div>
-
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Cetak Berita Acara PDF Resmi</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Hasilkan laporan rincian hak waris dan Berita Acara Kesepakatan lengkap bertanda tangan ahli waris dan saksi dalam format PDF[cite: 4].</p>
-                </div>
-
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Multi-Bahasa (Sunda & Indonesia)</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Dilengkapi pilihan bahasa pengantar (Basa Sunda dan Bahasa Indonesia) agar lebih nyaman digunakan oleh masyarakat lokal[cite: 4].</p>
-                </div>
-
-                <div class="bg-light border border-line rounded-3xl p-8 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-xl mb-6">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Garansi 100% Uang Kembali</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Jaminan keamanan penuh. Jika aplikasi mengalami kendala teknis dan tidak berfungsi sesuai deskripsi, uang Anda kembali utuh.</p>
+                <!-- Fitur 3 -->
+                <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#034f46] text-[#f3c663] rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#034f46]/20 group-hover:scale-110 transition"><i class="fas fa-file-pdf"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Cetak Hasil Perhitungan (Pro)</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Ekspor hasil perhitungan pembagian waris ke dalam format PDF untuk dicetak dan dibagikan kepada keluarga sebagai dokumen sah.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Keunggulan -->
-    <section id="keunggulan" class="py-20 bg-slate-100 border-t border-line">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Keunggulan Tambahan -->
+    <section id="keunggulan" class="py-16 md:py-24 px-4 sm:px-6 bg-slate-100/70 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="text-primary text-xs font-bold uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full inline-block mb-3">Transparan & Adil</span>
-                    <h2 class="text-3xl font-black text-dark mb-6">Menghindari Perselisihan Keluarga Melalui Musyawarah Mufakat</h2>
-                    <ul class="space-y-4 text-gray-700 text-sm md:text-base">
+                    <span class="bg-emerald-100 dark:bg-emerald-950/70 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Solusi Khusus & Lanjutan</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6 font-heading">Menangani Berbagai Kasus Waris Kompleks</h2>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300 text-sm md:text-base">
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-primary mt-1"></i>
-                            <span><strong>Perhitungan Gono-Gini Otomatis:</strong> Memisahkan hak harta bersama (50% pasangan yang hidup) sebelum sisa harta dibagikan sebagai warisan[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Pemisahan Harta Gono-Gini (Standar):</strong> Fitur untuk memisahkan harta bersama suami-istri dan pelunasan hutang/wasiat sebelum diwariskan.</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-primary mt-1"></i>
-                            <span><strong>Pengurang Pemakaman & Hutang:</strong> Memperhitungkan biaya mulasara mayit dan pelunasan utang pewaris secara akurat dari harta tirkah[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Penyelesaian Kasus Aul & Radd (Pro):</strong> Penyesuaian otomatis penyebut KPK apabila jumlah bagian melebihi atau kurang dari harta yang ada (Versi Pro).</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-primary mt-1"></i>
-                            <span><strong>Fleksibilitas Silih Rido:</strong> Memungkinkan keluarga melakukan penyesuaian damai (*silih rido* / hibah kekeluargaan) dengan tetap berpijak pada porsi dasar syariat[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Kasus Gharawain & Musyarakah (Pro):</strong> Mengakomodasi fatwa sahabat untuk kasus-kasus kewarisan khusus dalam yurisprudensi Islam.</span>
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-line shadow-sm">
-                    <h3 class="font-bold text-xl text-dark mb-4">💡 Sekali Beli untuk Selamanya</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        Nikmati akses aplikasi seumur hidup (*Lifetime Access*) tanpa biaya bulanan atau tahunan. Sangat cocok digunakan oleh kantor KUA, lembaga baitul mal, konsultan syariah, maupun keluarga besar.
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl shadow-sm border-aslam-glow transition duration-300">
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-4">🛡️ Edukasi + Kalkulator Terpadu</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                        Setiap pembelian aplikasi sudah termasuk <strong>E-Book Panduan Lengkap Ilmu Faraid</strong> untuk memudahkan Anda memahami asal-usul hukum perhitungan angka yang muncul pada kalkulator.
                     </p>
-                    <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-emerald-800 text-xs font-semibold">
-                        ✓ Akses file instan setelah pemesanan dikonfirmasi via WhatsApp.
+                    <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200/60 dark:border-emerald-800 text-xs text-[#034f46] dark:text-emerald-400 font-bold flex items-center space-x-2">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sekali beli untuk selamanya (Offline & Akses Tanpa Batas).</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Harga & Varian -->
-    <section id="harga" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full inline-block mb-3">Pilihan Edisi</span>
-                <h2 class="text-3xl md:text-4xl font-black text-primary-dark mb-4">Pilih Varian Mawarist Syariah yang Tepat</h2>
-                <p class="text-gray-600 text-lg">Solusi terbaik untuk kebutuhan penghitungan harta waris keluarga atau profesional[cite: 4].</p>
+    <!-- Harga & Varian -->
+    <section id="harga" class="py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="bg-amber-100/80 dark:bg-amber-950/60 text-[#9a6e1f] dark:text-amber-300 border border-amber-300/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Investasi Edukasi & Praktik</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 font-heading">Pilih Varian Mawarist Syariah</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Mulai belajar dan aplikasikan perhitungan waris yang sesuai dengan tuntunan Islam.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Varian Standar -->
-                <div class="bg-light rounded-3xl p-8 border border-line shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mawarist Syariah Standar</h3>
-                        <div class="text-4xl font-black text-primary-dark mb-6">Rp 50.000</div>
-                        <ul class="text-sm text-gray-600 space-y-3 mb-8">
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Perhitungan Faraidh Klasik Lengkap[cite: 4]</li>
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Pengelola Harta, Gono-Gini & Biaya[cite: 4]</li>
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Pilihan Bahasa Sunda & Indonesia[cite: 4]</li>
-                            <li><i class="fas fa-times text-rose-400 mr-2"></i> Tanpa Alokasi Aset Fisik (Silih Rido)</li>
-                            <li><i class="fas fa-times text-rose-400 mr-2"></i> Tanpa Cetak Berita Acara PDF Resmi</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/6285217000948?text=Halo%20Chenk%20Habib%20Digital,%20saya%20ingin%20memesan%20Mawarist%20Syariah%20Versi%20Standar" target="_blank" class="block w-full text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3.5 rounded-xl transition">
-                        Pesan Versi Standar
-                    </a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+                <!-- Basic -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-sm transition hover:shadow-md h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Mawarist Basic</h3>
+                    <div class="text-2xl md:text-3xl font-black text-[#034f46] dark:text-emerald-400 mb-6">Bayar Seikhlasnya</div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Algoritma Kalkulator Dasar</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Perhitungan Ahli Waris Inti</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> E-Book Panduan Faraid PDF</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Ahli Waris Ashabah Lengkap</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Cetak PDF & Kasus Khusus</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20Mawarist%20Syariah%20Versi%20Basic" target="_blank" class="block w-full text-center border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 rounded-xl hover:border-[#034f46] hover:text-[#034f46] dark:hover:border-emerald-400 dark:hover:text-emerald-400 transition-colors mt-auto">Pilih Basic</a>
                 </div>
 
-                <!-- Varian Pro (Paling Laris) -->
-                <div class="bg-primary rounded-3xl p-8 border-2 border-secondary shadow-2xl relative flex flex-col justify-between text-white">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-md">Paling Direkomendasikan</div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 mt-2">Mawarist Syariah PRO ⭐</h3>
-                        <div class="mb-6">
-                            <span class="text-sm font-semibold text-gray-300 line-through mr-2">Rp 150.000</span>
-                            <div class="text-4xl font-black text-white">Rp 99.000</div>
-                        </div>
-                        <ul class="text-sm text-gray-200 space-y-3 mb-8">
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Semua Fitur Edisi Standar</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Alokasi Aset Fisik & Silih Rido Lengkap[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Cetak Berita Acara Kesepakatan PDF[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Dukungan Mode KHI (Ahli Waris Pengganti)[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Garansi 100% Uang Kembali</li>
-                        </ul>
+                <!-- Pro (Paling Laris) -->
+                <div class="bg-gradient-to-b from-[#023b34] to-[#034f46] dark:from-slate-800 dark:to-slate-900 border-2 border-[#d4a038] rounded-3xl p-8 shadow-2xl transform md:scale-105 relative text-white h-full flex flex-col z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d4a038] text-slate-950 text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">Paling Direkomendasikan</div>
+                    <h3 class="text-xl font-bold mb-2 mt-2 text-[#fde08d]">Mawarist PRO ⭐</h3>
+                    <div class="mb-6">
+                        <span class="text-sm font-semibold text-emerald-200 line-through mr-2">Rp 150.000</span>
+                        <div class="text-4xl font-black text-white">Rp 49.000</div>
                     </div>
-                    <a href="https://wa.me/6285217000948?text=Halo%20Chenk%20Habib%20Digital,%20saya%20ingin%20memesan%20Mawarist%20Syariah%20Versi%20PRO" target="_blank" class="block w-full text-center bg-secondary hover:bg-secondary-light text-white font-bold py-3.5 rounded-xl shadow-glow transition">
-                        Pesan Versi PRO Sekarang
-                    </a>
+                    <ul class="text-sm text-emerald-50 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> <b>Semua Fitur Versi Standar</b></li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Kasus Khusus (Aul, Radd, Gharawain)</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Simulasi Harta Gono-gini Lengkap</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Support Konsultasi Prioritas ASLAM</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Update Hukum Fatwa Terbaru</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20Mawarist%20Syariah%20Versi%20PRO" target="_blank" class="block w-full text-center bg-gradient-to-r from-[#d4a038] to-[#b8862d] hover:from-[#b8862d] hover:to-[#9a6b16] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-[#d4a038]/30 transition-all border border-[#fde08d]/50 mt-auto">Pesan Versi Pro</a>
+                </div>
+
+                <!-- Standar -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-sm transition hover:shadow-md h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Mawarist Standar</h3>
+                    <div class="mb-6">
+                        <span class="text-sm font-semibold text-slate-400 line-through mr-2">Rp 100.000</span>
+                        <div class="text-4xl font-black text-[#034f46] dark:text-emerald-400">Rp 30.000</div>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> <b>Semua Fitur Versi Basic</b></li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Semua Ahli Waris (Dzawil Furudh, Ashabah)</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Algoritma Sistem Deteksi Hijab</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Cetak Hasil Laporan Perhitungan (PDF)</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Kasus Aul, Radd & Gono-gini</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20Mawarist%20Syariah%20Versi%20Standar" target="_blank" class="block w-full text-center bg-emerald-50 dark:bg-emerald-950/40 text-[#034f46] dark:text-emerald-400 font-bold py-3 rounded-xl hover:bg-[#034f46] hover:text-white dark:hover:bg-emerald-500 dark:hover:text-slate-950 transition-colors border border-emerald-200 dark:border-emerald-800 mt-auto">Pesan Versi Standar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Footer / CTA -->
-    <section class="py-20 bg-primary-dark text-center text-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-black mb-6">Mudahkan Perhitungan Waris Keluarga Anda Hari Ini</h2>
-            <p class="text-gray-300 text-base md:text-lg mb-8">Dapatkan aplikasi kalkulator mawarist profesional dengan lisensi penggunaan selamanya[cite: 4].</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/6285217000948?text=Halo%20Chenk%20Habib%20Digital,%20saya%20ingin%20konsultasi%20Mawarist%20Syariah" target="_blank" class="bg-secondary hover:bg-secondary-light text-white text-lg font-bold py-4 px-10 rounded-xl shadow-xl transition-all">
-                    Konsultasi via WhatsApp
-                </a>
-                <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-lg font-bold py-4 px-8 rounded-xl transition-all">
-                    ← Kembali ke Toko
-                </a>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                <p class="text-xs sm:text-sm text-slate-400">&copy; 2026 <strong class="text-[#f3c663]">ASLAM DigiArtha</strong> — Pusat Produk Digital. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex items-center space-x-3.5 text-lg">
+                    <a href="index.html" class="text-sm font-semibold text-[#f3c663] hover:underline transition">← Kembali ke Katalog Utama</a>
+                </div>
             </div>
         </div>
-    </section>
-
-    <footer class="bg-dark text-gray-400 py-8 text-center text-xs">
-        &copy; 2026 ASLAM DigiArtha. Hak Cipta Dilindungi Undang-Undang. (Garansi 100% Uang Kembali).
     </footer>
+
+    <!-- Script Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            const htmlRoot = document.getElementById('htmlRoot');
+            const modeIcon = document.getElementById('modeIcon');
+            if (htmlRoot.classList.contains('dark')) {
+                htmlRoot.classList.remove('dark');
+                modeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                htmlRoot.classList.add('dark');
+                modeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+    </script>
 </body>
 </html>
