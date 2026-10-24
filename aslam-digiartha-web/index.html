@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Dasar -->
+  <title>ASLAM DigiArtha - Pusat Produk Digital & Aplikasi Profesional</title>
+  <meta name="description" content="Pusat solusi digital terlengkap untuk Sekolah, DKM, dan UMKM. Dapatkan aplikasi KasirKu, LPJ BOSP, dan e-book syariah dengan sistem unduh otomatis 24 jam via Mayar.id & Lynk.id.">
+  <meta name="keywords" content="ASLAM DigiArtha, Aplikasi UMKM, Software POS, LPJ BOSP, Buku Induk Siswa, E-book Syariah, Kalkulator Mawarist, Template Desain">
+  <meta name="author" content="ASLAM DigiArtha">
+
+  <!-- Open Graph / Meta Social (Untuk preview WhatsApp, Facebook, dll) -->
+  <meta property="og:title" content="ASLAM DigiArtha - Pusat Produk Digital & Aplikasi Profesional">
+  <meta property="og:description" content="Kerjaan beres dalam hitungan menit! Unduh aplikasi siap pakai untuk sekolah, UMKM, dan DKM. Bergaransi 100%.">
+  <meta property="og:image" content="https://domainanda.com/logo_ASLAM_DigiArtha.png"> <!-- Ubah domainanda.com dengan domain asli Anda -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://domainanda.com/">
+
+  <!-- Schema Markup JSON-LD untuk SEO Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "ASLAM DigiArtha",
+    "description": "Pusat Produk Digital & Aplikasi Profesional untuk UMKM, Sekolah, dan DKM.",
+    "url": "https://domainanda.com",
+    "image": "https://domainanda.com/logo_ASLAM_DigiArtha.png",
+    "paymentAccepted": "QRIS, E-Wallet, Virtual Account",
+    "priceRange": "Rp 0 - Rp 250.000"
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: {
+            aslam: { gold: '#d4a038', goldLight: '#f9f0db', goldDark: '#a6791e', green: '#034f46', greenMid: '#047857', greenLight: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+    video::-webkit-media-controls { display: none !important; }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      15%, 85% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+    .animate-notification { animation: fadeInOut 5s ease-in-out infinite; }
+    .bg-aslam-gradient { background: linear-gradient(135deg, #023b34 0%, #034f46 55%, #b8862d 100%); }
+    .bg-aslam-button { background: linear-gradient(135deg, #034f46 0%, #057a68 65%, #c5922e 100%); }
+    .bg-aslam-button:hover { background: linear-gradient(135deg, #023831 0%, #046354 60%, #b07f21 100%); }
+    .bg-aslam-direct { background: linear-gradient(135deg, #b8862d 0%, #d4a038 50%, #034f46 100%); }
+    .bg-aslam-direct:hover { background: linear-gradient(135deg, #9a6b16 0%, #b8862d 50%, #023831 100%); }
+    .text-aslam-gradient { background: linear-gradient(135deg, #034f46 0%, #059669 45%, #d4a038 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .dark .text-aslam-gradient { background: linear-gradient(135deg, #34d399 0%, #fbbf24 55%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .border-aslam-glow:hover { border-color: #d4a038; box-shadow: 0 20px 25px -5px rgba(3, 79, 70, 0.14), 0 8px 10px -6px rgba(212, 160, 56, 0.12); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-[#034f46] selection:text-white transition-colors duration-300" id="bodyRoot">
+
+  <!-- Top Guarantee Bar -->
+  <div class="bg-gradient-to-r from-[#022c26] via-[#034f46] to-[#022c26] text-white py-2.5 px-4 text-center text-xs sm:text-sm font-medium shadow-md flex items-center justify-center space-x-2 border-b border-[#d4a038]/30">
+    <i class="fas fa-crown text-[#f3c663] animate-bounce"></i>
+    <span><strong>Garansi Resmi ASLAM DigiArtha:</strong> Unduh instan 24 jam via <strong>Mayar.id / Lynk.id</strong> & jaminan <strong>100% uang kembali</strong> (<a href="#faq-garansi" onclick="openFaq(1)" class="text-[#f3c663] underline hover:text-amber-200 transition font-semibold">S & K Berlaku</a>).</span>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 sticky top-0 z-40 shadow-sm transition-colors duration-300" id="navbarRoot">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
+      <a href="#" class="flex items-center group focus:outline-none flex-shrink-0" title="ASLAM DigiArtha - Pusat Produk Digital">
+        <div class="bg-white px-3.5 py-1.5 rounded-2xl border border-slate-200/90 dark:border-[#d4a038]/40 shadow-sm flex items-center transition duration-300 group-hover:border-[#034f46] group-hover:shadow-md">
+          <img src="logo_ASLAM_DigiArtha.png" alt="ASLAM DigiArtha" class="h-9 sm:h-11 md:h-12 w-auto max-w-[200px] sm:max-w-[260px] object-contain" onerror="this.style.display='none'; document.getElementById('svgLogoHeader').classList.remove('hidden'); document.getElementById('svgLogoHeader').classList.add('flex');">
+          <div id="svgLogoHeader" class="hidden items-center space-x-3 py-0.5">
+            <svg class="w-11 h-9 sm:w-12 sm:h-10 flex-shrink-0" viewBox="0 0 140 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="adGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10b981"/><stop offset="50%" stop-color="#047857"/><stop offset="100%" stop-color="#023b34"/></linearGradient>
+                <linearGradient id="adGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f6d365"/><stop offset="50%" stop-color="#d4a038"/><stop offset="100%" stop-color="#9a6b16"/></linearGradient>
+                <linearGradient id="leafGreenGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#034f46"/><stop offset="60%" stop-color="#10b981"/><stop offset="100%" stop-color="#a7f3d0"/></linearGradient>
+              </defs>
+              <path d="M58 14 H90 C115 14 132 30 132 53 C132 76 115 92 90 92 H56 L49 74 H88 C104 74 114 65 114 53 C114 41 104 32 88 32 H65 Z" fill="url(#adGoldGrad)"/>
+              <path d="M52 48 L70 92 H52 L42 66 Z" fill="url(#adGoldGrad)"/>
+              <path d="M8 92 L42 14 C45 7 53 7 56 14 L72 48 L56 48 L48 29 L26 92 H8 Z" fill="url(#adGreenGrad)"/>
+              <path d="M24 85 C32 60 52 46 82 35 C68 57 52 67 24 85 Z" fill="url(#leafGreenGrad)"/>
+              <path d="M25 90 C38 72 56 62 80 54 C66 73 48 80 25 90 Z" fill="url(#adGoldGrad)"/>
+              <path d="M68 65 H95 L91 79 H72 L68 65 Z" stroke="url(#adGreenGrad)" stroke-width="4.5" stroke-linejoin="round" fill="none"/>
+              <path d="M72 72 H92" stroke="url(#adGoldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="75" cy="87" r="4.5" fill="url(#adGoldGrad)"/><circle cx="88" cy="87" r="4.5" fill="url(#adGoldGrad)"/>
+            </svg>
+            <div class="flex flex-col justify-center leading-none pr-1">
+              <div class="text-base sm:text-xl font-extrabold tracking-tight flex items-center space-x-1.5"><span class="text-[#034f46] font-black">ASLAM</span><span class="text-[#d4a038] font-medium">DigiArtha</span></div>
+              <div class="w-full h-[1.5px] bg-gradient-to-r from-[#d4a038] via-[#d4a038] to-transparent my-1"></div>
+              <span class="text-[8px] sm:text-[9px] tracking-[0.22em] text-[#034f46] font-bold uppercase">Pusat Produk Digital</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700 dark:text-slate-200" id="navLinks">
+        <a href="#produk" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition flex items-center space-x-1.5"><i class="fas fa-shopping-bag text-xs text-[#d4a038]"></i><span>Katalog</span></a>
+        <a href="#skema" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Skema & Varian</a>
+        <a href="#fitur" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Keunggulan</a>
+        <a href="#pesan-dulu" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Coba Dulu</a>
+        <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="hover:text-rose-600 dark:hover:text-rose-400 transition flex items-center space-x-1"><i class="fab fa-youtube text-rose-600"></i><span>Tutorial</span></a>
+        <a href="#faq" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">FAQ</a>
+      </nav>
+
+      <div class="flex items-center space-x-2.5 sm:space-x-3">
+        <button onclick="toggleDarkMode()" id="modeToggleBtn" class="bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 text-[#034f46] dark:text-[#f3c663] border border-slate-200 dark:border-slate-700 p-2.5 rounded-xl transition flex items-center justify-center shadow-sm" title="Ubah Mode Tampilan">
+          <i class="fas fa-moon text-base sm:text-lg" id="modeIcon"></i>
+        </button>
+        <button onclick="openAiChat()" class="bg-aslam-button text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-lg shadow-[#034f46]/20 flex items-center space-x-2 border border-[#d4a038]/40">
+          <i class="fas fa-robot text-base sm:text-lg text-[#fde08d]"></i>
+          <span>Tanya AI</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50/70 via-white to-amber-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950/30 py-12 md:py-20 px-4 sm:px-6 border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300" id="heroRoot">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#034f46]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#d4a038]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
+      <div class="lg:col-span-7 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2.5 bg-white dark:bg-slate-800/90 border border-[#d4a038]/50 shadow-sm px-4 py-1.5 rounded-full mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#034f46] to-[#d4a038] animate-ping"></span>
+          <span class="text-xs font-bold text-[#034f46] dark:text-[#f3c663] uppercase tracking-wider">Free • Bayar Seikhlasnya • Berbayar (Checkout Otomatis 24 Jam)</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold mb-6 leading-[1.18] tracking-tight text-slate-900 dark:text-white" id="heroTitle">
+          Kerjaan Beres dalam Hitungan Menit! <span class="text-aslam-gradient">Buktikan Sendiri</span> Kemudahan Aplikasi Kami
+        </h1>
+        
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0" id="heroDesc">
+          Pusat solusi digital terlengkap untuk Sekolah, DKM, dan UMKM dalam varian <strong>Basic, Standar, hingga Profesional</strong>. Didukung sistem pembayaran & unduh file otomatis 24 jam via <strong>Mayar.id & Lynk.id</strong> tanpa antre admin! Tersedia juga layanan eksklusif <strong>Coba Aplikasi Dulu Baru Bayar</strong> khusus bagi pelanggan setia kami.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3.5 mb-8">
+          <a href="#produk" class="bg-aslam-button text-white font-bold px-7 py-4 rounded-2xl shadow-xl shadow-[#034f46]/25 hover:scale-[1.02] transition transform text-center text-sm sm:text-base flex items-center justify-center space-x-2.5 border border-[#d4a038]/40">
+            <i class="fas fa-shopping-cart text-[#fde08d]"></i><span>Belanja di Katalog</span>
+          </a>
+          <a href="#pesan-dulu" class="bg-white dark:bg-slate-800 border-2 border-[#d4a038]/60 dark:border-[#d4a038]/40 text-[#034f46] dark:text-white font-bold px-6 py-4 rounded-2xl hover:bg-amber-50/60 dark:hover:bg-slate-700 transition text-center text-sm sm:text-base shadow-sm flex items-center justify-center space-x-2">
+            <i class="fas fa-handshake text-[#d4a038]"></i><span>Layanan Coba Dulu</span>
+          </a>
+          <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 text-rose-700 dark:text-rose-300 font-bold px-5 py-4 rounded-2xl hover:bg-rose-100 dark:hover:bg-rose-900/50 transition text-center text-sm flex items-center justify-center space-x-2">
+            <i class="fab fa-youtube text-lg text-rose-600"></i><span>Tutorial YouTube</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 dark:border-slate-800 max-w-lg mx-auto lg:mx-0">
+          <div><div class="text-xl sm:text-2xl font-extrabold text-[#034f46] dark:text-emerald-400">Otomatis</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Via Mayar.id & Lynk.id</div></div>
+          <div class="border-x border-slate-200 dark:border-slate-800 px-4"><div class="text-xl sm:text-2xl font-extrabold text-[#d4a038] dark:text-amber-400">100%</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Garansi Uang Kembali</div></div>
+          <div><div class="text-xl sm:text-2xl font-extrabold text-[#034f46] dark:text-emerald-400">Lifetime</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sekali Beli Selamanya</div></div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-md lg:max-w-none">
+          <div class="absolute -inset-1.5 bg-gradient-to-r from-[#034f46] via-emerald-600 to-[#d4a038] rounded-[28px] blur-xl opacity-25"></div>
+          <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+            <div class="p-3.5 bg-slate-100 dark:bg-slate-800/90 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-[#034f46]"></div><div class="w-3 h-3 rounded-full bg-emerald-500"></div><div class="w-3 h-3 rounded-full bg-[#d4a038]"></div>
+                <span class="text-xs text-slate-600 dark:text-slate-300 ml-2 font-mono font-semibold">aslam-digiartha.mp4</span>
+              </div>
+              <button onclick="toggleAudio()" id="audioBtn" class="bg-aslam-button text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg shadow-sm hover:opacity-95 transition flex items-center space-x-1.5">
+                <i class="fas fa-volume-mute text-[#fde08d]" id="audioIcon"></i><span id="audioText">Nyalakan Suara</span>
+              </button>
+            </div>
+            <div class="bg-white dark:bg-slate-950 px-5 py-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-[#034f46] dark:bg-emerald-400"></span>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-200">Official Store: <span class="text-[#034f46] dark:text-emerald-400 font-extrabold">ASLAM</span> <span class="text-[#d4a038] font-bold">DigiArtha</span></span>
+              </div>
+              <span class="text-[11px] bg-amber-100 dark:bg-amber-950/60 text-[#9a6b16] dark:text-amber-300 px-2.5 py-0.5 rounded-full font-bold border border-[#d4a038]/30">Terverifikasi</span>
+            </div>
+            <div class="relative bg-slate-900 aspect-[4/3] sm:aspect-square flex items-center justify-center overflow-hidden">
+              <video id="promoVideo" autoplay loop muted playsinline preload="none" poster="logo_ASLAM_DigiArtha.png" class="w-full h-full object-cover" onerror="this.style.display='none'; document.getElementById('videoFallback').classList.remove('hidden');">
+                <source src="iklan.mp4" type="video/mp4">
+              </video>
+              <div id="videoFallback" class="hidden absolute inset-0 bg-gradient-to-br from-[#022c26] via-[#034f46] to-slate-950 p-8 flex flex-col items-center justify-center text-center text-white">
+                <div class="bg-white px-6 py-4 rounded-2xl shadow-2xl mb-6 max-w-[280px] w-full flex items-center justify-center border-2 border-[#d4a038]">
+                  <img src="logo_ASLAM_DigiArtha.png" alt="Logo ASLAM DigiArtha" loading="lazy" class="h-14 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('fallbackLogoText').classList.remove('hidden');">
+                  <div id="fallbackLogoText" class="hidden font-extrabold text-xl"><span class="text-[#034f46]">ASLAM</span> <span class="text-[#d4a038]">DigiArtha</span></div>
+                </div>
+                <h3 class="text-xl font-extrabold text-[#f3c663] mb-2">ASLAM DigiArtha</h3>
+                <p class="text-xs text-emerald-200 uppercase tracking-widest mb-4">Pusat Produk Digital & Aplikasi Siap Pakai</p>
+                <p class="text-xs text-slate-200 max-w-xs leading-relaxed">Transaksi otomatis & unduh file instan 24 jam melalui Mayar.id & Lynk.id, lengkap dengan Asisten AI & tutorial di YouTube resmi!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="bg-white dark:bg-slate-900 py-7 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300" id="trustSection">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div class="flex items-center space-x-3.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+        <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-[#b8862d] dark:text-amber-400 flex items-center justify-center flex-shrink-0 text-lg"><i class="fas fa-bolt"></i></div>
+        <div><div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Unduh Otomatis</div><div class="text-[11px] text-slate-500 dark:text-slate-400">Via Mayar.id & Lynk.id</div></div>
+      </div>
+      <div class="flex items-center space-x-3.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-400 flex items-center justify-center flex-shrink-0 text-lg"><i class="fas fa-hand-holding-usd"></i></div>
+        <div><div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Harga Fleksibel</div><div class="text-[11px] text-slate-500 dark:text-slate-400">Free, Seikhlasnya, & Pro</div></div>
+      </div>
+      <div class="flex items-center space-x-3.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+        <div class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center flex-shrink-0 text-lg"><i class="fab fa-youtube"></i></div>
+        <div><div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Video Tutorial</div><div class="text-[11px] text-slate-500 dark:text-slate-400">Channel YouTube Resmi</div></div>
+      </div>
+      <div class="flex items-center space-x-3.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800">
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-400 flex items-center justify-center flex-shrink-0 text-lg"><i class="fas fa-robot"></i></div>
+        <div><div class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Asisten AI 24 Jam</div><div class="text-[11px] text-slate-500 dark:text-slate-400">Layanan Bantuan Pintar</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksi Skema Harga, Tingkatan Varian & Sistem Pembayaran Otomatis -->
+  <section id="skema" class="py-16 md:py-20 px-4 sm:px-6 bg-slate-100/70 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="bg-emerald-100 dark:bg-emerald-950/70 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Cepat, Praktis & Tanpa Antre Admin</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Skema Harga & Transaksi Otomatis</h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Seluruh pemesanan reguler terintegrasi langsung dengan platform <strong>Mayar.id & Lynk.id</strong>. Bayar via QRIS, E-Wallet, atau Virtual Account, dan file otomatis terunduh detik itu juga!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-7 shadow-sm">
+          <div class="inline-flex items-center space-x-2 bg-emerald-100 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 text-xs font-bold px-3 py-1 rounded-lg mb-4"><i class="fas fa-gift"></i><span>1. Skema FREE (Gratis)</span></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Rp 0 / Klaim Otomatis</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">Tersedia pada edisi dasar/sampel pilihan. Cukup klik link produk di katalog dan unduh file secara gratis tanpa biaya sepeser pun.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border-2 border-[#d4a038]/50 rounded-3xl p-6 sm:p-7 shadow-md">
+          <div class="inline-flex items-center space-x-2 bg-amber-100 dark:bg-amber-950/60 text-[#9a6b16] dark:text-amber-300 text-xs font-bold px-3 py-1 rounded-lg mb-4"><i class="fas fa-hand-holding-heart"></i><span>2. Bayar Seikhlasnya</span></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Input Nominal Sukarela</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">Bebas masukkan nominal pembayaran sesuai keikhlasan Anda di halaman checkout <strong>Mayar.id / Lynk.id</strong>. Sekaligus membuka status <strong>Pelanggan Terverifikasi</strong>!</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-7 shadow-sm">
+          <div class="inline-flex items-center space-x-2 bg-emerald-100 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 text-xs font-bold px-3 py-1 rounded-lg mb-4"><i class="fas fa-crown text-[#d4a038]"></i><span>3. Berbayar (Sekali Beli)</span></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Lisensi Penuh Selamanya</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">Checkout instan 24 jam tanpa perlu konfirmasi manual. Begitu pembayaran sukses, akses unduhan file dan lisensi langsung dikirim otomatis ke layar & email Anda.</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-[#022c26] via-[#034f46] to-[#022c26] text-white rounded-3xl p-6 sm:p-8 border border-[#d4a038]/40 shadow-xl">
+        <div class="text-center mb-6">
+          <h3 class="text-lg sm:text-xl font-extrabold text-[#f3c663]">3 Tingkatan Varian Khusus Produk Aplikasi / Software</h3>
+          <p class="text-xs sm:text-sm text-emerald-100/90 mt-1">Untuk produk E-Book, Naskah, Template & Kursus dapat langsung dibeli dari katalog tanpa perlu memilih varian:</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-2"><span class="font-extrabold text-base text-white">Varian BASIC</span><span class="text-[11px] bg-emerald-800 text-emerald-200 px-2.5 py-0.5 rounded-full font-semibold">Pemula / Ringkas</span></div>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Fitur inti esensial yang ringan dan siap pakai untuk pencatatan dasar harian dengan cepat.</p>
+          </div>
+          <div class="bg-white/15 backdrop-blur-sm border-2 border-[#d4a038]/60 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-2"><span class="font-extrabold text-base text-[#fde08d]">Varian STANDAR</span><span class="text-[11px] bg-[#d4a038] text-slate-950 px-2.5 py-0.5 rounded-full font-bold">Paling Populer</span></div>
+            <p class="text-xs text-emerald-50 leading-relaxed">Fitur operasional lengkap untuk manajemen data sekolah, DKM, maupun UMKM beserta rekap laporan otomatis.</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-2"><span class="font-extrabold text-base text-white">Varian PROFESIONAL</span><span class="text-[11px] bg-amber-500/20 text-[#fde08d] border border-[#fde08d]/40 px-2.5 py-0.5 rounded-full font-semibold">Fitur Penuh (Pro)</span></div>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Spesifikasi tertinggi dengan kustomisasi profil/logo instansi, cetak struk/kartu otomatis, analisis lengkap, & support prioritas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keunggulan Section -->
+  <section id="fitur" class="py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="bg-amber-100/80 dark:bg-amber-950/60 text-[#9a6e1f] dark:text-amber-300 border border-amber-300/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Kenapa Banyak yang Beralih ke Sini?</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Keunggulan <span class="text-[#034f46] dark:text-emerald-400">ASLAM</span> <span class="text-[#d4a038]">DigiArtha</span></h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Dirancang dengan sistem distribusi digital otomatis agar Anda bisa langsung mengunduh dan mengoperasikan produk tanpa birokrasi yang rumit.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+          <div class="w-14 h-14 bg-[#034f46] text-[#f3c663] rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#034f46]/20 group-hover:scale-110 transition"><i class="fas fa-bolt"></i></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Checkout & Unduh Otomatis 24 Jam</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Bekerja sama dengan platform pembayaran resmi <strong>Mayar.id & Lynk.id</strong>. Bayar kapan saja, file langsung terkirim otomatis ke layar dan email Anda tanpa perlu menunggu admin.</p>
+        </div>
+        <div class="bg-gradient-to-b from-amber-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-amber-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+          <div class="w-14 h-14 bg-[#d4a038] text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-amber-700/20 group-hover:scale-110 transition"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Bisa Coba Dulu & Garansi 100%</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Khusus pelanggan yang pernah bertransaksi minimal 1x, tersedia fasilitas <strong>Coba Aplikasi Dulu Baru Bayar</strong> (untuk produk aplikasi pilihan) serta garansi 100% uang kembali.</p>
+        </div>
+        <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+          <div class="w-14 h-14 bg-rose-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-rose-600/20 group-hover:scale-110 transition"><i class="fab fa-youtube"></i></div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Asisten AI & Tutorial YouTube Resmi</h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Dilengkapi <strong>Asisten Chat AI</strong> di pojok kanan bawah web untuk tanya-jawab langsung, serta panduan video lengkap di <strong>Channel YouTube Resmi ASLAM DigiArtha</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Katalog Produk -->
+  <main id="produk" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="bg-emerald-100 dark:bg-emerald-950/70 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Etalase Resmi ASLAM DigiArtha</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Katalog Produk & Aplikasi Siap Pakai</h2>
+      <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+        Untuk <strong>E-Book, Naskah, Template & Kursus</strong>, klik <span class="inline-block bg-[#b8862d] text-white px-2 py-0.5 rounded text-[11px] font-bold">Beli & Download Otomatis</span> untuk checkout instan via <strong>Mayar.id / Lynk.id</strong>. Untuk <strong>Aplikasi/Software</strong>, klik <span class="inline-block bg-[#034f46] text-white px-2 py-0.5 rounded text-[11px] font-bold">Lihat Detail & Varian</span> untuk memilih edisi Basic, Standar, atau Profesional.
+      </p>
+    </div>
+
+    <!-- Pencarian & Filter 5 Kategori -->
+    <div class="max-w-5xl mx-auto mb-12 px-2">
+      <div class="relative w-full mb-6">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-[#034f46] dark:text-emerald-400"><i class="fas fa-search"></i></span>
+        <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Ketik nama aplikasi atau e-book yang Anda cari (misal: Kasir, BOSP, Tabungan, Khutbah)..." class="w-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl pl-11 pr-4 py-3.5 text-sm text-slate-900 dark:text-white focus:border-[#034f46] focus:ring-2 focus:ring-[#034f46]/20 outline-none shadow-sm transition">
+      </div>
+      <div class="flex flex-wrap gap-2.5 justify-center">
+        <button onclick="filterCategory('all')" id="btn-all" class="category-btn bg-aslam-button text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-md transition">Semua Produk (15)</button>
+        <button onclick="filterCategory('pos')" id="btn-pos" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Software & POS UMKM</button>
+        <button onclick="filterCategory('sekolah')" id="btn-sekolah" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Administrasi Sekolah</button>
+        <button onclick="filterCategory('keuangan')" id="btn-keuangan" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Keuangan & BOSP</button>
+        <button onclick="filterCategory('syariah')" id="btn-syariah" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Keagamaan & Syariah</button>
+        <button onclick="filterCategory('umum')" id="btn-umum" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Kreatif & Umum</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" id="productGrid">
+      <!-- 1. KasirKu (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="pos" data-name="sistem kasir pintar kasirku pos free bayar seikhlasnya">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Software & POS</span>
+          <img src="flyer_kasirku.png" alt="KasirKu" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-cash-register text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Sistem Kasir Pintar (KasirKu)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Free / Berbayar • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Aplikasi kasir & inventori handal untuk UMKM, toko kelontong, dan kantin dengan fitur cetak struk.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-kasirku.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 2. Inventori UMKM (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="pos" data-name="aplikasi manajemen inventori & gudang umkm stockku">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Software & POS</span>
+          <i class="fas fa-boxes text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Manajemen Inventori & Gudang UMKM</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 100.000 • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Sistem pelacakan barang masuk, keluar, dan opname stok gudang secara akurat untuk usaha menengah.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-inventori.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 3. Tabungan Murid (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="sekolah" data-name="aplikasi tabungan murid sekolah">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-[#9a6b16] font-bold px-3 py-1 rounded-full shadow-sm">Administrasi Sekolah</span>
+          <img src="flyer_tabungan.png" alt="Tabungan Murid" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-piggy-bank text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Aplikasi Tabungan Murid</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 75.000 • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Pencatatan setoran dan penarikan tabungan siswa secara transparan, otomatis, dan akurat.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-tabungan.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 4. Buku Induk Siswa (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="sekolah" data-name="aplikasi buku induk siswa & arsip digital sekolah">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-[#9a6b16] font-bold px-3 py-1 rounded-full shadow-sm">Administrasi Sekolah</span>
+          <i class="fas fa-address-book text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Buku Induk Siswa & Arsip Digital</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 150.000 • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Arsip data pribadi, riwayat pendidikan, dan mutasi siswa sekolah/madrasah secara digital terpadu.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-bukuinduk.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 5. Penjadwalan Otomatis (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="sekolah" data-name="aplikasi penjadwalan pelajaran otomatis sekolah">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-[#9a6b16] font-bold px-3 py-1 rounded-full shadow-sm">Administrasi Sekolah</span>
+          <i class="fas fa-calendar-alt text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Penjadwalan Pelajaran Otomatis</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 200.000 • (Standar & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Software penyusun jadwal sekolah pintar anti-bentrok untuk guru, kelas, dan mata pelajaran.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-jadwal.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 6. LPJ BOSP SmartSPJ (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="keuangan" data-name="aplikasi laporan pertanggungjawaban lpj bosp">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Keuangan & BOSP</span>
+          <img src="flyer-bosp.jpg" alt="LPJ BOSP" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-file-invoice-dollar text-[#d4a038] text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Aplikasi LPJ BOSP (SmartSPJ)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 150.000 • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Software pembukuan dan penyusunan Laporan Pertanggungjawaban Dana BOSP sekolah secara praktis.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-bosp.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 7. Kas RT & Masjid (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="keuangan" data-name="aplikasi manajemen keuangan kas rt & masjid digital seikhlasnya">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Keuangan & BOSP</span>
+          <i class="fas fa-mosque text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Manajemen Kas RT & Masjid Digital</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Seikhlasnya / Mulai Rp 50.000 • (Basic, Standar, & Pro)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Pencatatan iuran warga, infak, sedekah, dan laporan keuangan transparan siap cetak untuk warga.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-kasrt.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 8. Kalkulator Mawarist (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="syariah" data-name="kalkulator mawarist syariah faraid">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Keagamaan & Syariah</span>
+          <img src="flyer_mawarist.png" alt="Mawarist Syariah" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-scale-balanced text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Aplikasi Kalkulator Mawarist Syariah</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 50.000 • (Basic, Standar, & Profesional)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">E-book panduan faraid lengkap dengan aplikasi kalkulator otomatis pembagian waris hukum Islam.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-mawarist.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 9. E-Book Ratib Al-Haddad (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="syariah" data-name="e-book ratib al-haddad dzikir doanya seikhlasnya">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">E-Book Digital</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Keagamaan & Syariah</span>
+          <img src="flyer-ratib.jpg" alt="Ratib Al-Haddad" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-quran text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">E-Book Eksklusif Ratib Al-Haddad</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 25.000 / Bayar Seikhlasnya (PDF Siap Cetak)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Kumpulan wirid, dzikir, dan terjemahan lengkap Ratib Al-Haddad format PDF resolusi tinggi. Langsung terunduh otomatis.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 10. Kalkulator Zakat (APLIKASI) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="syariah" data-name="aplikasi kalkulator zakat penghasilan & maal digital">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Aplikasi Sistem</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Keagamaan & Syariah</span>
+          <i class="fas fa-hand-holding-heart text-[#d4a038] text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Kalkulator Zakat Penghasilan & Maal</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Free / Mulai Rp 45.000 • (Basic, Standar, & Pro)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Tools otomatis perhitungan nisab zakat profesi, perdagangan, emas, dan harta secara instan dan syar'i.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-emerald-50/80 dark:bg-emerald-950/40 px-3 py-2.5 rounded-xl border border-emerald-200/60 dark:border-emerald-800/50">
+              <span><i class="fas fa-shield-alt text-[#d4a038] mr-1"></i> Garansi 100%</span>
+              <span class="bg-[#034f46] text-[#fde08d] px-2 py-0.5 rounded-md text-[10px] font-bold"><i class="fas fa-handshake mr-1"></i>Bisa Coba Dulu*</span>
+            </div>
+          </div>
+          <a href="landing-zakat.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 11. E-Book Khutbah (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="syariah" data-name="e-book khutbah jumat idul adha idul fitri bahasa sunda indonesia">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">E-Book Digital</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-emerald-100 text-[#034f46] font-bold px-3 py-1 rounded-full shadow-sm">Keagamaan & Syariah</span>
+          <i class="fas fa-microphone-alt text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">E-Book Khutbah (Sunda & Indonesia)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 35.000 • Paket Lengkap Dwibahasa Siap Pakai</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Kumpulan naskah khutbah Jumat, Idul Adha, dan Idul Fitri pilihan lengkap dwibahasa (Sunda & Indonesia).</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 12. E-Book Prakata MC (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="umum" data-name="e-book prakata panduan pembawa acara mc profesional">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">E-Book Digital</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Kreatif & Umum</span>
+          <i class="fas fa-bullhorn text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">E-Book Prakata Pembawa Acara (MC)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 30.000 • Edisi Lengkap Siap Praktik</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Panduan lengkap naskah pembuka, susunan acara formal/non-formal, dan teknik vokal dasar untuk MC profesional.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 13. Biantara Seren Tampi Panganten (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="umum" data-name="e-book biantara seren tampi panganten basa sunda">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">E-Book Digital</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Kreatif & Umum</span>
+          <i class="fas fa-ring text-[#d4a038] text-6xl group-hover:scale-110 transition"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Biantara Seren Tampi Panganten (Sunda)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 35.000 • Naskah Lengkap Sastra Sunda Halus</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Kumpulan naskah pidato/biantara penyerahan dan penerimaan pengantin adat Sunda lengkap beralur sastra halus.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 14. Bundel Template Desain (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="umum" data-name="bundel template desain flyer & sosmed modern">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">Template Grafis</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Kreatif & Umum</span>
+          <img src="flyer-template.jpg" alt="Template Desain" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-paint-brush text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Bundel Template Desain Sosmed & Flyer</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 49.000 • Paket Bundel Lengkap Siap Edit</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Koleksi template desain grafis modern dan elegan khusus promosi sekolah, DKM, dan UMKM. Akses file instan.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 15. Kursus Master Excel & Web (NON-APLIKASI: LANGSUNG BELI VIA MAYAR/LYNK) -->
+      <div class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow transition duration-300 shadow-sm" data-category="umum" data-name="kursus online master excel vba & web dev">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative border-b border-slate-100 dark:border-slate-800 flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">E-Course Video</span>
+          <span class="absolute top-4 right-4 z-10 text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full shadow-sm">Kreatif & Umum</span>
+          <img src="flyer-kursus.jpg" alt="Kursus Online" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-graduation-cap text-[#034f46] dark:text-emerald-400 text-6xl'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-lg sm:text-xl mb-2 text-slate-900 dark:text-white">Kursus Master Excel VBA & Web Apps</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Rp 100.000 • Akses Penuh Materi & Source Code</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">Video tutorial terstruktur belajar membuat aplikasi perkantoran dan web mandiri dari nol hingga mahir.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis (Mayar/Lynk)</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2 shadow-md"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Testimoni Section -->
+  <section id="testimoni" class="bg-slate-100/80 dark:bg-slate-900/70 py-16 md:py-24 px-4 sm:px-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="bg-amber-100 dark:bg-amber-950/70 text-[#9a6e1f] dark:text-amber-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Testimoni Pilihan</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Apa Kata Mitra Pengguna Kami?</h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm">Kepercayaan instansi pendidikan, DKM, dan pelaku UMKM terhadap <strong>ASLAM DigiArtha</strong> adalah kebanggaan kami.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-3xl shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-amber-400 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-600 dark:text-slate-400 text-xs font-bold ml-2">(5.0 / 5)</span></div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic mb-6 leading-relaxed">"Aplikasi administrasi dan tabungan murid dari ASLAM DigiArtha sangat membantu pekerjaan di sekolah kami. Tampilannya rapi, ada tutorial YouTube-nya, dan perhitungannya sangat akurat."</p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-[#034f46] font-bold flex items-center justify-center text-sm">BA</div>
+            <div><div class="font-bold text-slate-900 dark:text-white text-sm">Bapak Ahmad</div><div class="text-xs text-[#034f46] dark:text-emerald-400 font-medium">Kepala Sekolah / Guru di Garut</div></div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-3xl shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-amber-400 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-600 dark:text-slate-400 text-xs font-bold ml-2">(5.0 / 5)</span></div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic mb-6 leading-relaxed">"Awalnya saya beli e-book langsung dari katalog dan otomatis terunduh. Karena sudah pernah transaksi 1x, saya bisa ajukan coba dulu aplikasi KasirKu di toko saya. Sangat amanah!"</p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-[#9a6b16] font-bold flex items-center justify-center text-sm">IS</div>
+            <div><div class="font-bold text-slate-900 dark:text-white text-sm">Ibu Siti</div><div class="text-xs text-[#034f46] dark:text-emerald-400 font-medium">Pengelola UMKM Lokal</div></div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 rounded-3xl shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-1 text-amber-400 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-600 dark:text-slate-400 text-xs font-bold ml-2">(5.0 / 5)</span></div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic mb-6 leading-relaxed">"Beli e-book khutbah dan biantara Sunda tengah malam pun langsung terunduh otomatis lewat sistem pembayarannya, plus Asisten AI-nya langsung menjawab semua pertanyaan saya dengan ramah!"</p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-[#034f46] font-bold flex items-center justify-center text-sm">HR</div>
+            <div><div class="font-bold text-slate-900 dark:text-white text-sm">Bapak H. Ridwan</div><div class="text-xs text-[#034f46] dark:text-emerald-400 font-medium">Tokoh Masyarakat / DKM</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kirim Produk Dulu Baru Bayar Section -->
+  <section id="pesan-dulu" class="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-[#022c26] via-[#034f46] to-slate-900 text-white border-t border-slate-200 dark:border-slate-800 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="text-center mb-10">
+        <span class="bg-[#d4a038]/20 text-[#fde08d] border border-[#d4a038]/40 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Jalur Khusus Pelanggan Setia (Manual Verifikasi WhatsApp)</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3">Coba Aplikasinya Dulu, Bayar Setelah Cocok!</h2>
+        <p class="text-emerald-100/90 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">Berbeda dengan pembelian reguler yang berjalan otomatis via <strong>Mayar.id / Lynk.id</strong>, pengajuan <strong>Coba Dulu / Kirim Dulu</strong> diproses secara personal melalui WhatsApp bagi pelanggan yang memenuhi 2 syarat di bawah ini.</p>
+      </div>
+
+      <div class="bg-amber-950/50 border-2 border-[#d4a038]/60 rounded-3xl p-5 sm:p-6 mb-8 max-w-2xl mx-auto backdrop-blur-sm shadow-lg">
+        <div class="flex items-center space-x-2.5 mb-3">
+          <i class="fas fa-clipboard-check text-[#fde08d] text-xl"></i>
+          <h3 class="font-extrabold text-sm sm:text-base text-[#fde08d] uppercase tracking-wide">2 Syarat Utama Layanan Coba Dulu / Kirim Dulu:</h3>
+        </div>
+        <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-amber-50 leading-relaxed">
+          <li><strong>Khusus Produk Aplikasi Pilihan:</strong> Hanya berlaku untuk 9 produk kategori Software/Aplikasi pada daftar formulir di bawah ini. Produk E-Book, Naskah, Template, dan Kursus tidak bisa dikirim dulu dan dapat langsung dibeli secara otomatis di katalog.</li>
+          <li><strong>Pelanggan Sudah Pernah Membeli Produk Jenis Apa Pun Minimal 1x:</strong> Pemohon <strong>wajib sudah pernah bertransaksi minimal 1 kali</strong> di ASLAM DigiArtha melalui Mayar.id / Lynk.id / WhatsApp (baik produk Berbayar, E-Book, maupun produk Bayar Seikhlasnya).</li>
+        </ol>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 border-2 border-[#d4a038]/40 rounded-3xl p-6 sm:p-10 shadow-2xl max-w-2xl mx-auto">
+        <form id="payLaterForm" onsubmit="processPayLaterOrder(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Nama Lengkap / Instansi</label>
+              <input type="text" id="plNama" required placeholder="Cth: Budi Santoso (SDN 1 Garut)" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Kabupaten/Kota</label>
+              <input type="text" id="plKota" required placeholder="Cth: Garut / Tasikmalaya / Bandung" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Nomor WhatsApp Terdaftar</label>
+              <input type="tel" id="plWA" required placeholder="Nomor WA saat pembelian sebelumnya" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Email Aktif</label>
+              <input type="email" id="plEmail" required placeholder="Untuk pengiriman file aplikasi" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+            </div>
+          </div>
+          <div class="mb-5">
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Produk yang Pernah Dibeli Sebelumnya (Syarat Wajib 1x Pembelian)</label>
+            <input type="text" id="plRiwayat" required placeholder="Cth: Pernah beli E-Book Ratib / Khutbah / KasirKu di Lynk.id/Mayar.id" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-6">
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Pilih Aplikasi yang Ingin Dicoba Dulu</label>
+              <select id="plProduk" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+                <option value="" disabled selected>-- Pilih Aplikasi Pilihan --</option>
+                <optgroup label="Software & POS UMKM">
+                  <option value="Sistem Kasir Pintar (KasirKu)">Sistem Kasir Pintar (KasirKu)</option>
+                  <option value="Manajemen Inventori & Gudang UMKM">Manajemen Inventori & Gudang UMKM</option>
+                </optgroup>
+                <optgroup label="Administrasi & Keuangan Sekolah">
+                  <option value="Aplikasi Tabungan Murid">Aplikasi Tabungan Murid</option>
+                  <option value="Aplikasi LPJ BOSP (SmartSPJ)">Aplikasi LPJ BOSP (SmartSPJ)</option>
+                  <option value="Buku Induk Siswa & Arsip Digital">Buku Induk Siswa & Arsip Digital</option>
+                  <option value="Penjadwalan Pelajaran Otomatis">Penjadwalan Pelajaran Otomatis</option>
+                </optgroup>
+                <optgroup label="Keuangan Komunitas & Syariah">
+                  <option value="Manajemen Kas RT & Masjid Digital">Manajemen Kas RT & Masjid Digital</option>
+                  <option value="Aplikasi Kalkulator Mawarist Syariah">Aplikasi Kalkulator Mawarist Syariah</option>
+                  <option value="Kalkulator Zakat Penghasilan & Maal">Kalkulator Zakat Penghasilan & Maal</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase">Varian Pilihan</label>
+              <select id="plVarian" required class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-[#034f46] outline-none">
+                <option value="Basic">Varian Basic</option>
+                <option value="Standar" selected>Varian Standar</option>
+                <option value="Profesional (Pro)">Varian Profesional</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-aslam-button text-white py-4 rounded-xl font-bold transition shadow-lg shadow-[#034f46]/30 flex items-center justify-center space-x-2.5 text-sm sm:text-base">
+            <i class="fab fa-whatsapp text-xl text-[#fde08d]"></i><span>Ajukan Uji Coba Aplikasi via WhatsApp</span>
+          </button>
+          <p class="text-[11px] text-center text-slate-500 dark:text-slate-400 mt-4 font-medium leading-relaxed">
+            <i class="fas fa-info-circle text-[#d4a038] mr-1"></i> Belum pernah bertransaksi di ASLAM DigiArtha? Silakan beli salah satu produk langsung di katalog (via Mayar.id / Lynk.id) minimal 1x untuk membuka fasilitas <strong>Coba Dulu Baru Bayar</strong>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (8 Pertanyaan Lengkap) -->
+  <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="text-center mb-12">
+      <span class="bg-emerald-100 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Pusat Bantuan & Ketentuan Layanan</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+      <p class="text-slate-600 dark:text-slate-300 text-sm max-w-xl mx-auto">Penjelasan lengkap mengenai sistem pembayaran otomatis <strong>Mayar.id / Lynk.id</strong>, skema harga, syarat layanan <em>Coba Dulu</em>, hingga tutorial YouTube resmi.</p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(0)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>1. Apa maksud skema produk Free, Bayar Seikhlasnya, dan Berbayar di toko ini?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon0"></i>
+        </button>
+        <div id="faqContent0" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <p class="mb-2">Seluruh produk di <strong>ASLAM DigiArtha</strong> berlaku untuk <strong>sekali beli/akses selamanya (Lifetime tanpa biaya bulanan)</strong> dengan 3 skema kepemilikan:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Free (Gratis Rp 0):</strong> Produk atau edisi dasar pilihan yang dapat diklaim dan diunduh secara cuma-cuma.</li>
+            <li><strong>Bayar Seikhlasnya:</strong> Anda bebas memasukkan sendiri nominal pembayaran sesuai keikhlasan Anda saat checkout di platform Mayar.id / Lynk.id.</li>
+            <li><strong>Berbayar (Harga Tetap):</strong> Produk dengan harga resmi yang terjangkau untuk membuka lisensi fitur penuh beserta garansi dan pendampingan teknis.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden" id="faq-garansi">
+        <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>2. Bagaimana Syarat & Ketentuan Garansi 100% Uang Kembali?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon1"></i>
+        </button>
+        <div id="faqContent1" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Klaim garansi berlaku maksimal <strong>7 hari kalender</strong> sejak tanggal pembelian.</li>
+            <li>Pembeli bersedia berkomunikasi dengan tim teknis kami terlebih dahulu untuk pengecekan dan pendampingan jika terdapat kendala saat instalasi/penggunaan.</li>
+            <li>Apabila aplikasi terbukti mengalami <em>error</em> sistem dan tidak dapat berjalan sesuai spesifikasi produk di perangkat Anda meskipun sudah ditangani tim teknis, dana dikembalikan <strong>100% utuh tanpa potongan</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border-2 border-[#d4a038]/50 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-amber-50/60 dark:bg-slate-800/90 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span class="flex items-center gap-2"><i class="fas fa-star text-[#d4a038]"></i><span>3. Apa saja syarat layanan "Coba Dulu / Kirim Dulu Baru Bayar"?</span></span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon2"></i>
+        </button>
+        <div id="faqContent2" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ol class="list-decimal pl-5 space-y-2 mb-3">
+            <li><strong>Hanya Berlaku untuk Produk Aplikasi/Software Tertentu:</strong> Khusus untuk 9 produk aplikasi sistem (<em>KasirKu, Inventori, Tabungan Murid, Buku Induk, Penjadwalan, LPJ BOSP, Kas RT/Masjid, Kalkulator Mawarist, dan Kalkulator Zakat</em>). Produk <strong>E-Book, Naskah, Template, dan Kursus Video tidak bisa dikirim dulu</strong> dan langsung dibeli melalui tombol <em>Beli & Download Otomatis</em> di katalog.</li>
+            <li><strong>Pelanggan Sudah Pernah Membeli Produk Jenis Apa Pun Minimal 1x:</strong> Pemohon wajib sudah pernah bertransaksi minimal 1 kali di ASLAM DigiArtha (baik produk Berbayar, E-Book, maupun produk Bayar Seikhlasnya).</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>4. Bagaimana cara pembayaran dan pengiriman file otomatis via Mayar.id / Lynk.id?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon3"></i>
+        </button>
+        <div id="faqContent3" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Produk Non-Aplikasi (E-Book, Naskah, Template & Kursus):</strong> Klik tombol <strong>"Beli & Download Otomatis"</strong> langsung di katalog.</li>
+            <li><strong>Produk Aplikasi:</strong> Klik <strong>"Lihat Detail & Varian"</strong> untuk memilih edisi Basic, Standar, atau Profesional.</li>
+            <li>Begitu pembayaran via QRIS, Virtual Account, atau E-Wallet di <strong>Mayar.id / Lynk.id</strong> berhasil, file produk <strong>langsung terunduh otomatis 24 jam</strong> di layar dan email Anda tanpa perlu menunggu admin!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>5. Apa perbedaan jenis aplikasi Basic, Standar, dan Profesional?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon4"></i>
+        </button>
+        <div id="faqContent4" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Varian Basic:</strong> Fitur inti paling mendasar untuk pencatatan sederhana dan cepat.</li>
+            <li><strong>Varian Standar:</strong> Fitur operasional harian lengkap beserta rekapitulasi laporan otomatis siap cetak.</li>
+            <li><strong>Varian Profesional (Pro):</strong> Edisi terlengkap dengan kustomisasi identitas/logo instansi, cetak struk/kartu otomatis, grafik analitik, & prioritas support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span class="flex items-center gap-2"><i class="fab fa-youtube text-rose-600 text-lg"></i><span>6. Di mana saya bisa melihat tutorial cara penggunaan aplikasinya?</span></span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon5"></i>
+        </button>
+        <div id="faqContent5" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          Seluruh tutorial penggunaan aplikasi—mulai dari instalasi hingga cetak laporan—dapat ditonton gratis di <strong>Channel YouTube Resmi ASLAM DigiArtha</strong>. Anda juga dapat bertanya langsung pada <strong>Asisten AI</strong> di pojok kanan bawah layar.
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(6)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>7. Bagaimana jika laptop/HP saya ganti baru atau di-install ulang? Apakah data aman?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon6"></i>
+        </button>
+        <div id="faqContent6" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          Anda tidak perlu membeli ulang! Setiap aplikasi dilengkapi fitur <strong>Backup & Restore Data</strong> (Ekspor/Impor), dan link unduhan dari <strong>Mayar.id / Lynk.id</strong> tersimpan permanen di email Anda untuk diunduh ulang kapan saja.
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(7)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>8. Berapa spesifikasi minimal Komputer, Laptop, HP Android, Tablet, iPad, dan iPhone?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon7"></i>
+        </button>
+        <div id="faqContent7" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Komputer / Laptop (Windows / Mac):</strong> Minimal RAM 2 GB (rekomendasi 4 GB), mendukung Microsoft Excel atau browser modern (Chrome/Edge/Firefox).</li>
+            <li><strong>HP Android / Tablet / iPad / iPhone:</strong> Minimal RAM 2 GB, Android 7.0+ / iOS 12.0+, browser Chrome/Safari terbaru, serta pembaca PDF standar untuk E-Book.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-14 border-t border-slate-800 transition-colors duration-300" id="footerRoot">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-10 border-b border-slate-800">
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <a href="#" class="bg-white px-4 py-2 rounded-2xl shadow-md border-2 border-[#d4a038]/50 inline-flex items-center justify-center hover:scale-[1.02] transition">
+            <img src="logo_ASLAM_DigiArtha.png" alt="ASLAM DigiArtha" loading="lazy" class="h-10 sm:h-11 w-auto max-w-[220px] object-contain" onerror="this.style.display='none'; document.getElementById('footerTextLogo').classList.remove('hidden'); document.getElementById('footerTextLogo').classList.add('flex');">
+            <div id="footerTextLogo" class="hidden items-center space-x-2 py-0.5"><span class="font-extrabold text-lg tracking-tight"><span class="text-[#034f46] font-black">ASLAM</span> <span class="text-[#d4a038]">DigiArtha</span></span></div>
+          </a>
+          <div class="sm:border-l sm:border-slate-800 sm:pl-4">
+            <div class="text-white font-bold text-sm sm:text-base">ASLAM DigiArtha</div>
+            <div class="text-xs text-[#f3c663] font-medium tracking-wide">Pusat Produk Digital Otomatis (Partner Resmi Mayar.id & Lynk.id)</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3.5 text-lg">
+          <a href="https://facebook.com/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#d4a038] hover:text-white hover:border-[#d4a038] transition" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-rose-600 hover:text-white hover:border-rose-600 transition" title="YouTube Resmi"><i class="fab fa-youtube"></i></a>
+          <button onclick="openAiChat()" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Asisten AI"><i class="fas fa-robot"></i></button>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-center sm:text-left">
+        <p class="text-xs sm:text-sm text-slate-400">&copy; 2026 <strong class="text-[#f3c663]">ASLAM DigiArtha</strong> — Pusat Produk Digital. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+          <a href="#produk" class="hover:text-[#f3c663] transition">Katalog</a>
+          <a href="#skema" class="hover:text-[#f3c663] transition">Skema & Varian</a>
+          <a href="#pesan-dulu" class="hover:text-[#f3c663] transition">Coba Dulu</a>
+          <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="hover:text-rose-400 transition">YouTube Resmi</a>
+          <a href="#faq" class="hover:text-[#f3c663] transition">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notifikasi Pembelian Real-Time -->
+  <div id="purchaseNotification" class="fixed bottom-6 left-6 z-40 bg-white dark:bg-slate-900 border-2 border-[#d4a038]/50 shadow-2xl rounded-2xl p-4 max-w-xs hidden animate-notification">
+    <div class="flex items-center space-x-3.5">
+      <div class="w-11 h-11 bg-aslam-button text-[#fde08d] rounded-xl flex items-center justify-center text-lg shadow-md flex-shrink-0"><i class="fas fa-bolt"></i></div>
+      <div>
+        <p class="text-[10px] text-[#034f46] dark:text-[#f3c663] font-bold uppercase tracking-wider">Checkout Otomatis ASLAM DigiArtha</p>
+        <h4 id="notifText" class="text-xs font-bold text-slate-800 dark:text-slate-100 leading-snug mt-0.5">Bapak H. Anwar (Garut) baru saja mengunduh Sistem Kasir Pintar (Pro).</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smart AI Chat Widget (Pojok Kanan Bawah) -->
+  <div class="fixed bottom-6 right-6 z-50 font-sans">
+    <div id="aiChatWindow" class="hidden mb-4 w-[335px] sm:w-[390px] bg-white dark:bg-slate-900 border-2 border-[#d4a038]/60 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+      <!-- Header Chat AI (Tanpa tulisan Jawaban Pertama Otomatis) -->
+      <div class="bg-aslam-gradient p-4 text-white flex justify-between items-center border-b border-[#d4a038]/30">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-2xl bg-white/15 border border-[#fde08d]/50 flex items-center justify-center text-[#fde08d] text-lg relative">
+            <i class="fas fa-robot"></i>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 border-2 border-[#034f46] rounded-full"></span>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-white flex items-center gap-1.5">
+              <span>Asisten AI ASLAM DigiArtha</span>
+            </h4>
+            <p class="text-[11px] text-emerald-200">Online 24 Jam • Siap Membantu Anda</p>
+          </div>
+        </div>
+        <button onclick="toggleAiChat()" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition" title="Tutup Chat"><i class="fas fa-times text-lg"></i></button>
+      </div>
+
+      <!-- Ruang Pesan Chat -->
+      <div id="aiChatMessages" class="p-4 h-80 overflow-y-auto space-y-3 bg-slate-50 dark:bg-slate-950/80 text-xs">
+        <!-- Sambutan Pertama Ucapan Selamat Datang -->
+        <div class="flex items-start space-x-2.5">
+          <div class="w-7 h-7 rounded-full bg-[#034f46] text-[#fde08d] flex items-center justify-center flex-shrink-0 text-xs mt-0.5"><i class="fas fa-robot"></i></div>
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 p-3.5 rounded-2xl rounded-tl-none shadow-sm leading-relaxed">
+            Assalamu'alaikum! 👋 <strong>Selamat datang di ASLAM DigiArtha — Pusat Produk Digital & Aplikasi Profesional Siap Pakai.</strong><br><br>
+            Saya Asisten AI yang siap membantu menjawab pertanyaan Anda seputar katalog produk, harga, varian, syarat layanan <em>Coba Dulu</em>, hingga panduan transaksi.<br><br>
+            Silakan pilih topik di bawah ini atau ketik langsung pertanyaan Anda:
+          </div>
+        </div>
+        <div class="pl-9 flex flex-wrap gap-1.5 pt-1" id="quickReplies">
+          <button onclick="askAi('Daftar 15 Produk & Harga')" class="bg-emerald-50 dark:bg-emerald-950/60 hover:bg-[#034f46] hover:text-white text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold transition">📦 Daftar Produk & Harga</button>
+          <button onclick="askAi('Syarat Coba Dulu')" class="bg-emerald-50 dark:bg-emerald-950/60 hover:bg-[#034f46] hover:text-white text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold transition">🤝 Syarat Coba Dulu</button>
+          <button onclick="askAi('Cara Beli & Download Otomatis')" class="bg-emerald-50 dark:bg-emerald-950/60 hover:bg-[#034f46] hover:text-white text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold transition">⚡ Cara Beli Otomatis</button>
+          <button onclick="askAi('Perbedaan Varian Basic, Standar & Pro')" class="bg-emerald-50 dark:bg-emerald-950/60 hover:bg-[#034f46] hover:text-white text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold transition">💎 Varian & Skema Harga</button>
+          <button onclick="askAi('Tutorial YouTube & Spesifikasi')" class="bg-emerald-50 dark:bg-emerald-950/60 hover:bg-[#034f46] hover:text-white text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold transition">🎥 Tutorial & Spek Alat</button>
+        </div>
+      </div>
+
+      <form onsubmit="handleUserChat(event)" class="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex items-center space-x-2">
+        <input type="text" id="aiChatInput" placeholder="Ketik pertanyaan Anda di sini..." class="flex-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-[#034f46]">
+        <button type="submit" class="bg-aslam-button text-white w-9 h-9 rounded-xl flex items-center justify-center shadow-md hover:opacity-95 transition flex-shrink-0"><i class="fas fa-paper-plane text-xs text-[#fde08d]"></i></button>
+      </form>
+
+      <div class="bg-slate-100 dark:bg-slate-950 px-4 py-2 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-[11px]">
+        <span class="text-slate-500 dark:text-slate-400">Ingin terhubung ke Admin?</span>
+        <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20berkonsultasi%20mengenai%20produk%20digital." target="_blank" class="text-[#034f46] dark:text-emerald-400 font-bold hover:underline flex items-center gap-1"><i class="fab fa-whatsapp"></i> Hubungi Admin WA</a>
+      </div>
+    </div>
+
+    <button onclick="toggleAiChat()" class="bg-aslam-button text-white px-4 py-3.5 rounded-full flex items-center space-x-2.5 shadow-xl shadow-[#034f46]/40 hover:scale-105 transition transform relative border-2 border-[#d4a038] ml-auto">
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white animate-ping"></span>
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white"></span>
+      <i class="fas fa-robot text-xl text-[#fde08d]" id="chatTriggerIcon"></i>
+      <span class="text-xs sm:text-sm font-bold tracking-wide">Chat Asisten AI</span>
+    </button>
+  </div>
+
+  <script>
+    function toggleFaq(index) {
+      const content = document.getElementById('faqContent' + index);
+      const icon = document.getElementById('faqIcon' + index);
+      const isHidden = content.classList.contains('hidden');
+      content.classList.toggle('hidden', !isHidden);
+      icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
+    function openFaq(index) {
+      const content = document.getElementById('faqContent' + index);
+      const icon = document.getElementById('faqIcon' + index);
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+
+    function toggleDarkMode() {
+      const htmlRoot = document.getElementById('htmlRoot');
+      const modeIcon = document.getElementById('modeIcon');
+      if (htmlRoot.classList.contains('dark')) {
+        htmlRoot.classList.remove('dark');
+        modeIcon.classList.replace('fa-sun', 'fa-moon');
+      } else {
+        htmlRoot.classList.add('dark');
+        modeIcon.classList.replace('fa-moon', 'fa-sun');
+      }
+    }
+
+    function toggleAudio() {
+      const video = document.getElementById('promoVideo');
+      const icon = document.getElementById('audioIcon');
+      const text = document.getElementById('audioText');
+      video.muted = !video.muted;
+      icon.className = video.muted ? "fas fa-volume-mute text-[#fde08d]" : "fas fa-volume-up text-[#fde08d]";
+      text.innerText = video.muted ? "Nyalakan Suara" : "Matikan Suara";
+    }
+
+    function filterProducts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.getElementsByClassName('product-card');
+      for (let card of cards) {
+        card.style.display = card.getAttribute('data-name').includes(input) ? "flex" : "none";
+      }
+    }
+
+    function filterCategory(category) {
+      const cards = document.getElementsByClassName('product-card');
+      const buttons = document.getElementsByClassName('category-btn');
+      for (let btn of buttons) {
+        btn.className = "category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition";
+      }
+      document.getElementById('btn-' + category).className = "category-btn bg-aslam-button text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-md transition";
+      for (let card of cards) {
+        const cat = card.getAttribute('data-category');
+        card.style.display = (category === 'all' || cat === category) ? "flex" : "none";
+      }
+    }
+
+    function processPayLaterOrder(e) {
+      e.preventDefault();
+      const nama = document.getElementById('plNama').value;
+      const kota = document.getElementById('plKota').value;
+      const wa = document.getElementById('plWA').value;
+      const email = document.getElementById('plEmail').value;
+      const riwayat = document.getElementById('plRiwayat').value;
+      const produk = document.getElementById('plProduk').value;
+      const varian = document.getElementById('plVarian').value;
+      const message = `Halo *ASLAM DigiArtha*,%0A%0ASaya Pelanggan Terverifikasi ingin mengajukan layanan *Coba Aplikasi Dulu, Bayar Setelah Cocok*. Berikut data saya:%0A- Nama/Instansi: ${nama}%0A- Kab/Kota: ${kota}%0A- No WA Terdaftar: ${wa}%0A- Email: ${email}%0A- Riwayat Pembelian Sebelumnya (Min. 1x): *${riwayat}*%0A- Aplikasi yang Diajukan: *${produk}*%0A- Varian: *${varian}*%0A%0AMohon diverifikasi riwayat pembelian saya dan diproses pengiriman file uji cobanya. Terima kasih!`;
+      window.open(`https://wa.me/6285217000948?text=${message}`, '_blank');
+      document.getElementById('payLaterForm').reset();
+    }
+
+    // =========================================================
+    // SISTEM CHATBOT ASISTEN AI ASLAM DIGIARTHA (KNOWLEDGE BASE)
+    // =========================================================
+    function toggleAiChat() {
+      const chatWin = document.getElementById('aiChatWindow');
+      const triggerIcon = document.getElementById('chatTriggerIcon');
+      const isHidden = chatWin.classList.contains('hidden');
+      chatWin.classList.toggle('hidden', !isHidden);
+      triggerIcon.classList.replace(isHidden ? 'fa-robot' : 'fa-chevron-down', isHidden ? 'fa-chevron-down' : 'fa-robot');
+    }
+
+    function openAiChat() {
+      const chatWin = document.getElementById('aiChatWindow');
+      if (chatWin.classList.contains('hidden')) toggleAiChat();
+    }
+
+    function askAi(topic) {
+      appendUserMessage(topic);
+      generateAiResponse(topic);
+    }
+
+    function handleUserChat(e) {
+      e.preventDefault();
+      const inputEl = document.getElementById('aiChatInput');
+      const text = inputEl.value.trim();
+      if (!text) return;
+      appendUserMessage(text);
+      inputEl.value = '';
+      generateAiResponse(text);
+    }
+
+    function appendUserMessage(text) {
+      const container = document.getElementById('aiChatMessages');
+      container.insertAdjacentHTML('beforeend', `<div class="flex justify-end"><div class="bg-[#034f46] text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[82%] text-xs leading-relaxed">${text}</div></div>`);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function generateAiResponse(query) {
+      const container = document.getElementById('aiChatMessages');
+      const q = query.toLowerCase().trim();
+      const typingId = 'typing-' + Date.now();
+      container.insertAdjacentHTML('beforeend', `<div id="${typingId}" class="flex items-center space-x-2 text-slate-400 text-xs pl-2"><i class="fas fa-robot text-[#034f46] animate-bounce"></i><span>Asisten AI sedang mengetik...</span></div>`);
+      container.scrollTop = container.scrollHeight;
+
+      setTimeout(() => {
+        const typingEl = document.getElementById(typingId);
+        if (typingEl) typingEl.remove();
+        let reply = "";
+
+        // 1. Sapaan / Ucapan Selamat Datang
+        if (/^(halo|hai|hi|assalamu|salam|pagi|siang|sore|malam|permisi|tes|test|ping|admin)$/i.test(q)) {
+          reply = `Wa'alaikumussalam / Halo! 👋 <strong>Selamat datang di ASLAM DigiArtha — Pusat Produk Digital & Aplikasi Siap Pakai.</strong><br><br>Ada informasi produk, harga, varian, atau layanan yang ingin Anda tanyakan? Silakan ketik nama aplikasi/e-book yang Anda cari.`;
+        }
+        // 2. Daftar Semua Produk (15 Produk)
+        else if (q.includes("daftar") || q.includes("semua produk") || q.includes("15 produk") || q.includes("katalog") || q.includes("produk apa saja") || q.includes("jual apa")) {
+          reply = `<strong>Daftar 15 Produk Resmi ASLAM DigiArtha:</strong><br>
+          <strong>A. Aplikasi/Software (Bisa Coba Dulu*):</strong><br>
+          1. Sistem Kasir Pintar (KasirKu) - <em>Free / Berbayar</em><br>
+          2. Manajemen Inventori UMKM - <em>Mulai Rp 100.000</em><br>
+          3. Aplikasi Tabungan Murid - <em>Mulai Rp 75.000</em><br>
+          4. Buku Induk Siswa Digital - <em>Mulai Rp 150.000</em><br>
+          5. Penjadwalan Pelajaran Otomatis - <em>Mulai Rp 200.000</em><br>
+          6. Aplikasi LPJ BOSP (SmartSPJ) - <em>Mulai Rp 150.000</em><br>
+          7. Kas RT & Masjid Digital - <em>Seikhlasnya / Rp 50.000</em><br>
+          8. Kalkulator Mawarist Syariah - <em>Mulai Rp 50.000</em><br>
+          9. Kalkulator Zakat Digital - <em>Free / Mulai Rp 45.000</em><br><br>
+          <strong>B. Produk Langsung Beli & Download Otomatis:</strong><br>
+          10. E-Book Ratib Al-Haddad - <em>Rp 25.000 / Seikhlasnya</em><br>
+          11. E-Book Khutbah (Sunda & Indo) - <em>Rp 35.000</em><br>
+          12. E-Book Prakata MC - <em>Rp 30.000</em><br>
+          13. Biantara Seren Tampi Panganten - <em>Rp 35.000</em><br>
+          14. Bundel Template Desain - <em>Rp 49.000</em><br>
+          15. Kursus Excel VBA & Web Apps - <em>Rp 100.000</em>`;
+        }
+        // 3. Syarat Coba Dulu / Kirim Dulu
+        else if (q.includes("coba") || q.includes("kirim dulu") || q.includes("bayar nanti") || q.includes("uji coba") || q.includes("trial") || q.includes("syarat")) {
+          reply = `<strong>Ketentuan & 2 Syarat Layanan Coba Dulu / Kirim Dulu:</strong><br>
+          1. <strong>Khusus 9 Produk Aplikasi/Software:</strong> KasirKu, Inventori, Tabungan Murid, Buku Induk, Penjadwalan, LPJ BOSP, Kas RT/Masjid, Mawarist, & Zakat. (Tidak berlaku untuk E-Book, Naskah, Template & Kursus).<br>
+          2. <strong>Wajib Sudah Pernah Membeli Min. 1x:</strong> Pelanggan sudah pernah membeli produk jenis apa pun minimal 1 kali di ASLAM DigiArtha.<br><br>
+          <a href="#pesan-dulu" onclick="toggleAiChat()" class="inline-block bg-[#034f46] text-[#fde08d] px-3 py-1.5 rounded-lg font-bold mt-1">📋 Isi Form Coba Dulu</a>`;
+        }
+        // 4. Cara Beli, Pembayaran Mayar.id / Lynk.id & Pengiriman
+        else if (q.includes("cara beli") || q.includes("cara pesan") || q.includes("pembayaran") || q.includes("mayar") || q.includes("lynk") || q.includes("download") || q.includes("unduh") || q.includes("qris") || q.includes("transfer") || q.includes("ongkir") || q.includes("dikirim")) {
+          reply = `<strong>Cara Pembelian & Pengiriman Otomatis 24 Jam:</strong><br>
+          • Kami bekerja sama dengan platform resmi <strong>Mayar.id & Lynk.id</strong> (mendukung QRIS, Virtual Account Bank, & E-Wallet) serta <strong>bebas ongkos kirim</strong>.<br>
+          • <strong>Produk E-Book, Template & Kursus:</strong> Langsung klik tombol <em>"Beli & Download Otomatis"</em> pada katalog.<br>
+          • <strong>Produk Aplikasi:</strong> Klik <em>"Lihat Detail & Varian"</em> untuk memilih edisi Basic, Standar, atau Pro.<br>
+          • Begitu pembayaran selesai, file <strong>langsung terunduh otomatis detik itu juga</strong> di layar & dikirim ke email Anda!`;
+        }
+        // 5. Varian (Basic, Standar, Pro) & Skema Harga (Free, Seikhlasnya, Lifetime)
+        else if (q.includes("varian") || q.includes("basic") || q.includes("standar") || q.includes("profesional") || q.includes("perbedaan") || q.includes("seikhlasnya") || q.includes("free") || q.includes("gratis") || q.includes("langganan") || q.includes("bulanan") || q.includes("lifetime") || q.includes("sekali beli")) {
+          reply = `<strong>Skema Kepemilikan & Tingkatan Varian di ASLAM DigiArtha:</strong><br>
+          • <strong>Sekali Beli Selamanya (Lifetime):</strong> Tidak ada biaya bulanan/tahunan.<br>
+          • <strong>3 Skema Harga:</strong> Tersedia produk <em>Free (Rp 0)</em>, <em>Bayar Seikhlasnya</em> (nominal sukarela), dan <em>Berbayar</em>.<br>
+          • <strong>3 Varian Aplikasi:</strong><br>
+          1. <strong>Basic:</strong> Fitur dasar esensial yang ringkas.<br>
+          2. <strong>Standar:</strong> Fitur operasional harian lengkap + laporan otomatis.<br>
+          3. <strong>Profesional (Pro):</strong> Fitur tertinggi + kustom logo instansi + cetak struk/kartu + prioritas support.`;
+        }
+        // 6. Garansi 100% Uang Kembali
+        else if (q.includes("garansi") || q.includes("uang kembali") || q.includes("refund") || q.includes("rusak") || q.includes("tidak berfungsi")) {
+          reply = `<strong>Garansi Resmi 100% Uang Kembali:</strong><br>
+          • Berlaku maksimal <strong>7 hari kalender</strong> sejak pembelian.<br>
+          • Wajib berkonsultasi dengan tim teknis kami terlebih dahulu untuk pengecekan kendala.<br>
+          • Jika aplikasi terbukti mengalami error sistem dan gagal diperbaiki oleh tim kami, dana dikembalikan <strong>100% utuh tanpa potongan</strong>.`;
+        }
+        // 7. Tutorial YouTube, Spesifikasi Perangkat & Backup Data
+        else if (q.includes("tutorial") || q.includes("youtube") || q.includes("cara pakai") || q.includes("gaptek") || q.includes("awam") || q.includes("spek") || q.includes("spesifikasi") || q.includes("ram") || q.includes("laptop") || q.includes("android") || q.includes("iphone") || q.includes("ipad") || q.includes("install ulang") || q.includes("backup")) {
+          reply = `<strong>Tutorial, Spesifikasi Perangkat & Keamanan Data:</strong><br>
+          • <strong>Video Tutorial:</strong> Seluruh panduan penggunaan tersedia lengkap di <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="text-rose-600 font-bold underline">Channel YouTube Resmi ASLAM DigiArtha</a>.<br>
+          • <strong>Spesifikasi Minimal:</strong> Komputer/Laptop (Windows/Mac) atau HP Android/iPhone/iPad minimal <strong>RAM 2 GB</strong>.<br>
+          • <strong>Ganti Laptop / Install Ulang:</strong> Aman dan tidak perlu beli ulang karena dilengkapi fitur <strong>Backup & Restore Data</strong>.`;
+        }
+        // 8. Detail Produk Spesifik (KasirKu & Inventori)
+        else if (q.includes("kasir") || q.includes("pos") || q.includes("kelontong") || q.includes("kantin") || q.includes("inventori") || q.includes("gudang") || q.includes("stok")) {
+          reply = `<strong>Informasi Produk UMKM & POS:</strong><br>
+          • <strong>Sistem Kasir Pintar (KasirKu):</strong> Tersedia skema Free & Berbayar (Varian Basic, Standar & Pro) dengan fitur cetak struk. (<a href="landing-kasirku.html" target="_blank" class="text-[#034f46] dark:text-emerald-400 font-bold underline">Lihat Detail KasirKu</a>)<br>
+          • <strong>Manajemen Inventori & Gudang UMKM:</strong> Mulai Rp 100.000 untuk pelacakan stok keluar-masuk & opname. (<a href="landing-inventori.html" target="_blank" class="text-[#034f46] dark:text-emerald-400 font-bold underline">Lihat Detail Inventori</a>)`;
+        }
+        // 9. Detail Produk Spesifik (Sekolah & BOSP)
+        else if (q.includes("bosp") || q.includes("lpj") || q.includes("spj") || q.includes("tabungan") || q.includes("buku induk") || q.includes("jadwal") || q.includes("sekolah")) {
+          reply = `<strong>Informasi Produk Administrasi & Keuangan Sekolah:</strong><br>
+          • <strong>Aplikasi LPJ BOSP (SmartSPJ):</strong> Mulai Rp 150.000 (<a href="landing-bosp.html" target="_blank" class="underline font-bold">Detail</a>)<br>
+          • <strong>Aplikasi Tabungan Murid:</strong> Mulai Rp 75.000 (<a href="landing-tabungan.html" target="_blank" class="underline font-bold">Detail</a>)<br>
+          • <strong>Buku Induk Siswa Digital:</strong> Mulai Rp 150.000 (<a href="landing-bukuinduk.html" target="_blank" class="underline font-bold">Detail</a>)<br>
+          • <strong>Penjadwalan Pelajaran Otomatis:</strong> Mulai Rp 200.000 (<a href="landing-jadwal.html" target="_blank" class="underline font-bold">Detail</a>)`;
+        }
+        // 10. Detail Produk Spesifik (Syariah, E-Book, Template, Kursus)
+        else if (q.includes("mawarist") || q.includes("waris") || q.includes("faraid") || q.includes("zakat") || q.includes("masjid") || q.includes("kas rt") || q.includes("ratib") || q.includes("khutbah") || q.includes("mc") || q.includes("pembawa acara") || q.includes("biantara") || q.includes("seren tampi") || q.includes("sunda") || q.includes("template") || q.includes("flyer") || q.includes("kursus") || q.includes("vba")) {
+          reply = `<strong>Informasi Produk Syariah, E-Book & Kreatif:</strong><br>
+          • <strong>Aplikasi (Ada Varian Basic/Standar/Pro):</strong> Kas RT & Masjid (Seikhlasnya/Rp 50rb), Kalkulator Mawarist (Rp 50rb), Kalkulator Zakat (Free/Rp 45rb).<br>
+          • <strong>Produk Langsung Beli di Katalog:</strong> E-Book Ratib Al-Haddad (Rp 25rb/Seikhlasnya), E-Book Khutbah Sunda & Indo (Rp 35rb), E-Book MC (Rp 30rb), Biantara Seren Tampi Sunda (Rp 35rb), Bundel Template Desain (Rp 49rb), & Kursus Excel VBA/Web (Rp 100rb).<br><br>
+          <a href="#produk" onclick="toggleAiChat()" class="inline-block bg-[#b8862d] text-white px-3 py-1.5 rounded-lg font-bold">🛒 Beli Langsung di Katalog</a>`;
+        }
+        // 11. JIKA PERTANYAAN TIDAK TERTERA DI APLIKASI / WEB -> ARAHKAN KE WA ADMIN
+        else {
+          const encodedQ = encodeURIComponent(`Halo Admin ASLAM DigiArtha, saya ingin menanyakan informasi yang belum tertera di web: "${query}"`);
+          reply = `Mohon maaf, jawaban untuk pertanyaan mengenai <strong>"${query}"</strong> belum tertera secara spesifik di halaman aplikasi kami. 🙏<br><br>
+          Untuk mendapatkan penjelasan langsung dan akurat, kami sarankan Anda menghubungi <strong>Admin Resmi ASLAM DigiArtha</strong> melalui tombol WhatsApp di bawah ini:<br><br>
+          <a href="https://wa.me/6285217000948?text=${encodedQ}" target="_blank" class="inline-flex items-center space-x-2 bg-[#034f46] hover:bg-[#023831] text-white px-3.5 py-2 rounded-xl font-bold shadow-md transition">
+            <i class="fab fa-whatsapp text-[#fde08d] text-base"></i>
+            <span>Hubungi Admin via WhatsApp</span>
+          </a>`;
+        }
+
+        container.insertAdjacentHTML('beforeend', `<div class="flex items-start space-x-2.5"><div class="w-7 h-7 rounded-full bg-[#034f46] text-[#fde08d] flex items-center justify-center flex-shrink-0 text-xs mt-0.5"><i class="fas fa-robot"></i></div><div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 p-3.5 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] text-xs leading-relaxed">${reply}</div></div>`);
+        container.scrollTop = container.scrollHeight;
+      }, 450);
+    }
+
+    const buyersData = [
+      { name: "Bapak H. Anwar (Garut)", product: "Sistem Kasir Pintar (Varian Profesional)" },
+      { name: "Ibu Rina S.Pd (Bandung)", product: "Aplikasi Tabungan Murid via Mayar.id" },
+      { name: "Bapak Dadan (Tasikmalaya)", product: "E-Book Khutbah Sunda via Lynk.id" },
+      { name: "Ibu Nengsih (Sumedang)", product: "Kalkulator Mawarist Syariah (Varian Pro)" },
+      { name: "Bapak Ust. Fauzi (Ciamis)", product: "Aplikasi LPJ BOSP (SmartSPJ)" }
+    ];
+
+    function showRandomNotification() {
+      const notifBox = document.getElementById('purchaseNotification');
+      const notifText = document.getElementById('notifText');
+      const randomBuyer = buyersData[Math.floor(Math.random() * buyersData.length)];
+      notifText.innerText = `${randomBuyer.name} baru saja mengunduh ${randomBuyer.product}.`;
+      notifBox.classList.remove('hidden');
+      setTimeout(() => notifBox.classList.add('hidden'), 5000);
+    }
+
+    setTimeout(() => {
+      showRandomNotification();
+      setInterval(showRandomNotification, 15000);
+    }, 4000);
+  </script>
+</body>
+</html>
