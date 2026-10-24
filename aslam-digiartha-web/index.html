@@ -177,10 +177,7 @@
                 <div class="w-3 h-3 rounded-full bg-[#034f46]"></div><div class="w-3 h-3 rounded-full bg-emerald-500"></div><div class="w-3 h-3 rounded-full bg-[#d4a038]"></div>
                 <span class="text-xs text-slate-600 dark:text-slate-300 ml-2 font-mono font-semibold">aslam-digiartha.mp4</span>
               </div>
-              <button onclick="toggleAudio()" id="audioBtn" class="bg-aslam-button text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg shadow-sm hover:opacity-95 transition flex items-center space-x-1.5">
-                <i class="fas fa-volume-mute text-[#fde08d]" id="audioIcon"></i><span id="audioText">Nyalakan Suara</span>
-              </button>
-            </div>
+             </div>
             <div class="bg-white dark:bg-slate-950 px-5 py-3 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
               <div class="flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-[#034f46] dark:bg-emerald-400"></span>
@@ -189,9 +186,13 @@
               <span class="text-[11px] bg-amber-100 dark:bg-amber-950/60 text-[#9a6b16] dark:text-amber-300 px-2.5 py-0.5 rounded-full font-bold border border-[#d4a038]/30">Terverifikasi</span>
             </div>
             <div class="relative bg-slate-900 aspect-[4/3] sm:aspect-square flex items-center justify-center overflow-hidden">
-              <video id="promoVideo" autoplay loop muted playsinline preload="none" poster="logo_ASLAM_DigiArtha.png" class="w-full h-full object-cover" onerror="this.style.display='none'; document.getElementById('videoFallback').classList.remove('hidden');">
-                <source src="iklan.mp4" type="video/mp4">
-              </video>
+              <iframe class="w-full h-full object-cover" 
+  src="https://youtube.com/shorts/7u5vVwXr2LM?autoplay=1&mute=1&loop=1&playlist=ID_VIDEO_ANDA&controls=0&modestbranding=1" 
+  title="Promo ASLAM DigiArtha" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
               <div id="videoFallback" class="hidden absolute inset-0 bg-gradient-to-br from-[#022c26] via-[#034f46] to-slate-950 p-8 flex flex-col items-center justify-center text-center text-white">
                 <div class="bg-white px-6 py-4 rounded-2xl shadow-2xl mb-6 max-w-[280px] w-full flex items-center justify-center border-2 border-[#d4a038]">
                   <img src="logo_ASLAM_DigiArtha.png" alt="Logo ASLAM DigiArtha" loading="lazy" class="h-14 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('fallbackLogoText').classList.remove('hidden');">
