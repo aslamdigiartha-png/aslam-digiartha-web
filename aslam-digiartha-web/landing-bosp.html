@@ -1,102 +1,152 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartSPJ BOSP - Aplikasi Laporan Pertanggungjawaban Keuangan Sekolah</title>
-    <!-- Google Fonts: Inter -->
+    <title>SmartSPJ BOSP - Laporan Pertanggungjawaban Sekolah | ASLAM DigiArtha</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Konfigurasi Tailwind Khas ASLAM DigiArtha -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        heading: ['Plus Jakarta Sans', 'sans-serif'] 
+                    },
                     colors: {
-                        primary: { DEFAULT: '#1e2b3c', light: '#2c3e50', dark: '#16202b' },
-                        secondary: { DEFAULT: '#3498db', light: '#5dade2', dark: '#2980b9' },
-                        accent: { DEFAULT: '#27ae60', light: '#2ecc71' }
+                        aslam: { gold: '#d4a038', goldLight: '#f9f0db', goldDark: '#a6791e', green: '#034f46', greenMid: '#047857', greenLight: '#10b981' }
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-aslam-gradient { background: linear-gradient(135deg, #023b34 0%, #034f46 55%, #b8862d 100%); }
+        .bg-aslam-button { background: linear-gradient(135deg, #034f46 0%, #057a68 65%, #c5922e 100%); }
+        .bg-aslam-button:hover { background: linear-gradient(135deg, #023831 0%, #046354 60%, #b07f21 100%); }
+        .text-aslam-gradient { background: linear-gradient(135deg, #034f46 0%, #059669 45%, #d4a038 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dark .text-aslam-gradient { background: linear-gradient(135deg, #34d399 0%, #fbbf24 55%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .border-aslam-glow:hover { border-color: #d4a038; box-shadow: 0 20px 25px -5px rgba(3, 79, 70, 0.14), 0 8px 10px -6px rgba(212, 160, 56, 0.12); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-secondary selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-[#034f46] selection:text-white transition-colors duration-300" id="bodyRoot">
 
-    <!-- Header / Navbar -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-3">
-                    <span class="text-xl font-black text-primary">Smart<span class="text-accent">SPJ BOSP</span></span>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center text-sm font-semibold">
-                    <a href="#fitur" class="text-slate-600 hover:text-secondary transition">Fitur Utama</a>
-                    <a href="#keunggulan" class="hover:text-secondary transition">Keunggulan</a>
-                    <a href="#harga" class="hover:text-secondary transition">Varian & Harga</a>
-                    <a href="index.html" class="bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2.5 rounded-xl transition">← Kembali ke Toko Utama</a>
-                </div>
-                <div class="flex items-center">
-                    <a href="#harga" class="bg-secondary hover:bg-secondary-dark text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition">Pesan Sekarang</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Top Guarantee Bar -->
+    <div class="bg-gradient-to-r from-[#022c26] via-[#034f46] to-[#022c26] text-white py-2.5 px-4 text-center text-xs sm:text-sm font-medium shadow-md flex items-center justify-center space-x-2 border-b border-[#d4a038]/30">
+        <i class="fas fa-crown text-[#f3c663] animate-bounce"></i>
+        <span><strong>Garansi Resmi ASLAM DigiArtha:</strong> Unduh instan 24 jam via <strong>Mayar.id / Lynk.id</strong> & jaminan <strong>100% uang kembali</strong>.</span>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-900 via-primary to-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <span class="bg-secondary/20 border border-secondary/30 text-secondary-light text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-6">
-                        🛡️ Siap Audit BPK & Inspektorat
-                    </span>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-                        Solusi Otomatisasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-light to-accent">LPJ Dana BOSP</span> Sekolah
-                    </h1>
-                    <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        Aplikasi pembukuan keuangan sekolah profesional. Kelola BKU, cetak kuitansi otomatis, rekapitulasi realisasi K7, hingga Berita Acara Pemeriksaan (BAP) kas dengan 1 klik.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#harga" class="bg-accent hover:bg-accent-light text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition text-center">
-                            Lihat Pilihan Harga
-                        </a>
-                        <a href="#fitur" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-8 py-4 rounded-2xl transition text-center">
-                            Pelajari Fitur Sistem
-                        </a>
+    <!-- Header / Navigation -->
+    <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 sticky top-0 z-40 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
+            <!-- Logo ASLAM -->
+            <a href="index.html" class="flex items-center group focus:outline-none flex-shrink-0" title="Kembali ke ASLAM DigiArtha">
+                <div class="bg-white px-3.5 py-1.5 rounded-2xl border border-slate-200/90 dark:border-[#d4a038]/40 shadow-sm flex items-center transition duration-300 group-hover:border-[#034f46] group-hover:shadow-md">
+                    <div class="flex items-center space-x-3 py-0.5">
+                        <div class="flex flex-col justify-center leading-none pr-1">
+                            <div class="text-base sm:text-xl font-extrabold tracking-tight flex items-center space-x-1.5"><span class="text-[#034f46] font-black">ASLAM</span><span class="text-[#d4a038] font-medium">DigiArtha</span></div>
+                            <div class="w-full h-[1.5px] bg-gradient-to-r from-[#d4a038] via-[#d4a038] to-transparent my-1"></div>
+                            <span class="text-[8px] sm:text-[9px] tracking-[0.22em] text-[#034f46] font-bold uppercase">SmartSPJ BOSP</span>
+                        </div>
                     </div>
                 </div>
+            </a>
 
-                <!-- Preview Kotak Aplikasi / Dashboard Mockup -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-3xl shadow-2xl w-full max-w-md">
-                        <div class="flex items-center space-x-2 mb-4 pb-3 border-b border-white/10">
-                            <div class="w-3 h-3 rounded-full bg-rose-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-amber-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
-                            <span class="text-xs text-slate-300 font-mono ml-2">SmartSPJ-BOSP.app</span>
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700 dark:text-slate-200">
+                <a href="#fitur" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition flex items-center space-x-1.5"><i class="fas fa-star text-xs text-[#d4a038]"></i><span>Fitur Utama</span></a>
+                <a href="#keunggulan" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Keunggulan</a>
+                <a href="#harga" class="hover:text-[#034f46] dark:hover:text-[#f3c663] transition">Varian & Harga</a>
+                <a href="index.html" class="hover:text-rose-600 dark:hover:text-rose-400 transition flex items-center space-x-1"><i class="fas fa-arrow-left text-rose-600"></i><span>Kembali ke Katalog</span></a>
+            </nav>
+
+            <div class="flex items-center space-x-2.5 sm:space-x-3">
+                <button onclick="toggleDarkMode()" id="modeToggleBtn" class="bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 text-[#034f46] dark:text-[#f3c663] border border-slate-200 dark:border-slate-700 p-2.5 rounded-xl transition flex items-center justify-center shadow-sm" title="Ubah Mode Tampilan">
+                    <i class="fas fa-moon text-base sm:text-lg" id="modeIcon"></i>
+                </button>
+                <a href="#harga" class="bg-aslam-button text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-lg shadow-[#034f46]/20 flex items-center space-x-2 border border-[#d4a038]/40">
+                    <i class="fas fa-shopping-cart text-[#fde08d]"></i>
+                    <span class="hidden sm:inline">Pesan Sekarang</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50/70 via-white to-amber-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950/30 py-16 lg:py-28 px-4 sm:px-6 border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#034f46]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#d4a038]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2.5 bg-white dark:bg-slate-800/90 border border-[#d4a038]/50 shadow-sm px-4 py-1.5 rounded-full mb-6">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#034f46] to-[#d4a038] animate-ping"></span>
+                    <span class="text-xs font-bold text-[#034f46] dark:text-[#f3c663] uppercase tracking-wider">🛡️ Siap Audit BPK & Inspektorat</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight text-slate-900 dark:text-white font-heading">
+                    Solusi Otomatisasi <span class="text-aslam-gradient">LPJ Dana BOSP</span> Sekolah
+                </h1>
+                
+                <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base md:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Aplikasi pembukuan keuangan sekolah profesional. Kelola BKU, cetak kuitansi otomatis, rekapitulasi realisasi K7, hingga Berita Acara Pemeriksaan (BAP) kas dengan 1 klik.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#harga" class="bg-aslam-button text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-[#034f46]/25 hover:scale-[1.02] transition transform text-center text-sm sm:text-base flex items-center justify-center space-x-2.5 border border-[#d4a038]/40">
+                        <i class="fas fa-tags text-[#fde08d]"></i><span>Lihat Pilihan Harga</span>
+                    </a>
+                    <a href="#fitur" class="bg-white dark:bg-slate-800 border-2 border-[#d4a038]/60 dark:border-[#d4a038]/40 text-[#034f46] dark:text-white font-bold px-8 py-4 rounded-2xl hover:bg-amber-50/60 dark:hover:bg-slate-700 transition text-center text-sm sm:text-base shadow-sm flex items-center justify-center space-x-2">
+                        <i class="fas fa-layer-group text-[#d4a038]"></i><span>Pelajari Fitur Sistem</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Preview Kotak Aplikasi / Dashboard Mockup -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-[#034f46] via-emerald-600 to-[#d4a038] rounded-[28px] blur-xl opacity-25"></div>
+                    <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-2xl p-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-5 pb-4 border-b border-slate-100 dark:border-slate-800">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                                <span class="text-xs text-slate-500 font-mono ml-2 font-semibold">SmartSPJ-BOSP.app</span>
+                            </div>
+                            <span class="text-[10px] bg-[#034f46] text-[#fde08d] px-2 py-1 rounded-md font-bold uppercase">Pro Version</span>
                         </div>
                         <div class="space-y-3">
-                            <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center text-sm">
-                                <span>Saldo Kas Bank</span>
-                                <strong class="text-secondary-light">Rp 45.500.000</strong>
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Saldo Kas Bank</span>
+                                <strong class="text-xl text-[#034f46] dark:text-emerald-400">Rp 45.500.000</strong>
                             </div>
-                            <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center text-sm">
-                                <span>Saldo Kas Tunai</span>
-                                <strong class="text-amber-400">Rp 2.150.000</strong>
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Saldo Kas Tunai</span>
+                                <strong class="text-xl text-[#d4a038] dark:text-amber-400">Rp 2.150.000</strong>
                             </div>
-                            <div class="bg-white/5 p-3 rounded-xl border border-white/10 flex justify-between items-center text-sm">
-                                <span>Total Saldo BKU</span>
-                                <strong class="text-emerald-400">Rp 47.650.000</strong>
+                            <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 flex justify-between items-center text-sm">
+                                <span class="text-slate-600 dark:text-slate-400 font-semibold">Total Saldo BKU</span>
+                                <strong class="text-xl text-[#034f46] dark:text-emerald-400">Rp 47.650.000</strong>
                             </div>
-                            <div class="bg-accent/20 border border-accent/40 text-emerald-300 p-3 rounded-xl text-xs text-center font-semibold mt-4">
-                                ✓ Status: Pembukuan Valid & Seimbang
+                            <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200/60 dark:border-emerald-800 text-xs text-[#034f46] dark:text-emerald-400 font-bold text-center flex items-center justify-center space-x-2 mt-4">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Status: Pembukuan Valid & Seimbang</span>
                             </div>
                         </div>
                     </div>
@@ -106,137 +156,162 @@
     </section>
 
     <!-- Fitur Utama -->
-    <section id="fitur" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="fitur" class="py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full inline-block mb-3">Fitur Unggulan</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Semua Kebutuhan SPJ BOSP dalam Satu Sistem</h2>
-                <p class="text-slate-600 text-sm md:text-base">Dirancang khusus sesuai juknis pengelolaan dana BOSP untuk meringankan tugas bendahara sekolah.</p>
+                <span class="bg-amber-100/80 dark:bg-amber-950/60 text-[#9a6e1f] dark:text-amber-300 border border-amber-300/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Fitur Unggulan</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 font-heading">Semua Kebutuhan SPJ BOSP dalam Satu Sistem</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Dirancang khusus sesuai juknis pengelolaan dana BOSP untuk meringankan tugas bendahara sekolah.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-lg transition">
-                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Penatausahaan BKU & BAP</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Pencatatan transaksi tunai/bank otomatis menghitung saldo berjalan dan mencetak Berita Acara Pemeriksaan Kas (BAP).</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Fitur 1 -->
+                <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#034f46] text-[#f3c663] rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#034f46]/20 group-hover:scale-110 transition"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Penatausahaan BKU & BAP</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Pencatatan transaksi tunai/bank otomatis menghitung saldo berjalan dan mencetak Berita Acara Pemeriksaan Kas (BAP) dengan sekali klik.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-lg transition">
-                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Perhitungan Pajak Otomatis</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Perhitungan PPN, PPh 21, dan PPh 22 terhitung secara otomatis saat Anda mencatat transaksi belanja sekolah[cite: 4].</p>
+                <!-- Fitur 2 -->
+                <div class="bg-gradient-to-b from-amber-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-amber-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#d4a038] text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-amber-700/20 group-hover:scale-110 transition"><i class="fas fa-table"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Matriks Realisasi K7</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Rekapitulasi otomatis penggunaan dana BOSP ke dalam 8 Standar Nasional Pendidikan dan 12 komponen juknis secara akurat.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl hover:shadow-lg transition">
-                    <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-table"></i>
-                    </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Matriks Realisasi K7</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Rekapitulasi penggunaan dana BOSP ke dalam 8 Standar Nasional Pendidikan dan 12 komponen juknis secara akurat[cite: 4].</p>
+                <!-- Fitur 3 -->
+                <div class="bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-800 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-700 p-8 rounded-3xl hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-[#034f46] text-[#f3c663] rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-[#034f46]/20 group-hover:scale-110 transition"><i class="fas fa-print"></i></div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2.5">Cetak Master Bundle (Pro)</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Fitur khusus Pro: Cetak seluruh dokumen pertanggungjawaban SPJ secara massal (kuitansi, nota, & kelengkapan) hanya dengan 1-klik.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Keunggulan Tambahan -->
-    <section id="keunggulan" class="py-20 bg-slate-100 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="keunggulan" class="py-16 md:py-24 px-4 sm:px-6 bg-slate-100/70 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">Keamanan & Kemudahan</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Bebas Repot, Aman, dan Sesuai Regulasi Pemeriksaan</h2>
-                    <ul class="space-y-4 text-slate-700 text-sm md:text-base">
+                    <span class="bg-emerald-100 dark:bg-emerald-950/70 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Keamanan & Kemudahan</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6 font-heading">Bebas Repot, Aman, dan Sesuai Regulasi Pemeriksaan</h2>
+                    <ul class="space-y-4 text-slate-700 dark:text-slate-300 text-sm md:text-base">
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-emerald-600 mt-1"></i>
-                            <span><strong>Validasi Juknis Honor:</strong> Sistem otomatis memberikan peringatan jika akumulasi belanja honor melebihi batas ketentuan (misal maks 50% untuk sekolah swasta)[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Validasi Juknis Honor:</strong> Sistem otomatis memberikan peringatan (warning) jika akumulasi belanja honor melebihi batas ketentuan (misal maks 50% untuk sekolah swasta).</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-emerald-600 mt-1"></i>
-                            <span><strong>Cetak Master Bundle 1-Klik:</strong> Cetak seluruh dokumen pertanggungjawaban SPJ secara massal tanpa perlu repot membuka satu per satu[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Otomatisasi Laporan Pajak & Aset (Pro):</strong> Perhitungan pajak otomatis (PPN, PPh21, PPh22) dan pencatatan buku inventaris aset (Pro-Only).</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-emerald-600 mt-1"></i>
-                            <span><strong>Backup & Restore Data Mudah:</strong> Fitur ekspor/impor data berbasis JSON menjaga keamanan arsip keuangan sekolah Anda[cite: 4].</span>
+                            <i class="fas fa-check-circle text-[#034f46] dark:text-emerald-400 mt-1"></i>
+                            <span><strong>Backup & Restore Data JSON:</strong> Fitur pencadangan data menjaga keamanan arsip keuangan sekolah Anda dari kehilangan.</span>
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-xl text-slate-900 mb-4">🛡️ Jaminan Garansi 100% Uang Kembali</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl shadow-sm border-aslam-glow transition duration-300">
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-4">🛡️ Jaminan Garansi 100% Uang Kembali</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                         Kami memberikan garansi penuh. Jika aplikasi mengalami kendala teknis fatal dan tidak dapat digunakan setelah didampingi oleh tim teknis kami, uang Anda dikembalikan 100%.
                     </p>
-                    <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-emerald-800 text-xs font-semibold">
-                        ✓ Sekali beli untuk selamanya (Lifetime Access tanpa biaya bulanan).
+                    <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200/60 dark:border-emerald-800 text-xs text-[#034f46] dark:text-emerald-400 font-bold flex items-center space-x-2">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sekali beli untuk selamanya (Lifetime Access tanpa biaya bulanan).</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Harga & Varian -->
-    <section id="harga" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Harga & Varian (Sesuai Logika Code index_3.html) -->
+    <section id="harga" class="py-16 md:py-24 px-4 sm:px-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-secondary text-xs font-bold uppercase tracking-widest bg-secondary/10 px-3 py-1 rounded-full inline-block mb-3">Investasi Terbaik</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Pilih Varian SmartSPJ BOSP</h2>
-                <p class="text-slate-600 text-sm md:text-base">Tingkatkan efisiensi laporan keuangan sekolah Anda hari ini[cite: 4].</p>
+                <span class="bg-amber-100/80 dark:bg-amber-950/60 text-[#9a6e1f] dark:text-amber-300 border border-amber-300/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Investasi Terbaik</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 font-heading">Pilih Varian SmartSPJ BOSP</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">Tingkatkan efisiensi laporan keuangan sekolah Anda hari ini.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Varian Standar -->
-                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">SmartSPJ BOSP Standar</h3>
-                        <div class="text-4xl font-black text-slate-900 mb-6">Rp 150.000</div>
-                        <ul class="text-sm text-slate-600 space-y-3 mb-8">
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Input BKU & Cetak Kuitansi</li>
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Berita Acara Pemeriksaan (BAP)</li>
-                            <li><i class="fas fa-check text-emerald-600 mr-2"></i> Laporan Realisasi K7</li>
-                            <li><i class="fas fa-times text-rose-400 mr-2"></i> Tarik Data RKAS Otomatis (Excel)</li>
-                            <li><i class="fas fa-times text-rose-400 mr-2"></i> Cetak Master Bundle 1-Klik</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/6285217000948?text=Halo%20Chenk%20Habib%20Digital,%20saya%20ingin%20memesan%20SmartSPJ%20BOSP%20Versi%20Standar" target="_blank" class="block w-full text-center bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-3.5 rounded-xl transition">
-                        Pesan Versi Standar
-                    </a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+                <!-- Basic -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-sm transition hover:shadow-md h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">SmartSPJ Basic</h3>
+                    <div class="text-2xl md:text-3xl font-black text-[#034f46] dark:text-emerald-400 mb-6">Bayar Seikhlasnya</div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Input BKU & Cetak Kuitansi</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Berita Acara Pemeriksaan (BAP) Kas</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Manajemen Profil & Master Toko</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Laporan Realisasi K7 Lengkap</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Fitur Otomatisasi PRO</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20SmartSPJ%20BOSP%20Versi%20Basic" target="_blank" class="block w-full text-center border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 rounded-xl hover:border-[#034f46] hover:text-[#034f46] dark:hover:border-emerald-400 dark:hover:text-emerald-400 transition-colors mt-auto">Pilih Basic</a>
                 </div>
 
-                <!-- Varian Pro (Paling Direkomendasikan) -->
-                <div class="bg-primary rounded-3xl p-8 border-2 border-secondary shadow-2xl relative flex flex-col justify-between text-white">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-md">Paling Direkomendasikan</div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 mt-2">SmartSPJ BOSP PRO ⭐</h3>
-                        <div class="mb-6">
-                            <span class="text-sm font-semibold text-slate-400 line-through mr-2">Rp 350.000</span>
-                            <div class="text-4xl font-black text-white">Rp 250.000</div>
-                        </div>
-                        <ul class="text-sm text-slate-200 space-y-3 mb-8">
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Semua Fitur Versi Standar</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Tarik Data RKAS ARKAS (Excel) Otomatis[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Buku Pembantu Pajak & Aset Lengkap[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Cetak Master Bundle SPJ 1-Klik[cite: 4]</li>
-                            <li><i class="fas fa-check text-secondary mr-2"></i> Grafik Analitik Penyerapan Anggaran[cite: 4]</li>
-                        </ul>
+                <!-- Pro (Paling Laris) -->
+                <div class="bg-gradient-to-b from-[#023b34] to-[#034f46] dark:from-slate-800 dark:to-slate-900 border-2 border-[#d4a038] rounded-3xl p-8 shadow-2xl transform md:scale-105 relative text-white h-full flex flex-col z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d4a038] text-slate-950 text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md whitespace-nowrap">Paling Direkomendasikan</div>
+                    <h3 class="text-xl font-bold mb-2 mt-2 text-[#fde08d]">SmartSPJ PRO ⭐</h3>
+                    <div class="mb-6">
+                        <span class="text-sm font-semibold text-emerald-200 line-through mr-2">Rp 150.000</span>
+                        <div class="text-4xl font-black text-white">Rp 55.000</div>
                     </div>
-                    <a href="https://wa.me/6285217000948?text=Halo%20Chenk%20Habib%20Digital,%20saya%20ingin%20memesan%20SmartSPJ%20BOSP%20Versi%20PRO" target="_blank" class="block w-full text-center bg-secondary hover:bg-secondary-light text-white font-bold py-3.5 rounded-xl shadow-lg transition">
-                        Pesan Versi PRO Sekarang
-                    </a>
+                    <ul class="text-sm text-emerald-50 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> <b>Semua Fitur Versi Standar</b></li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Tarik Data RKAS (Excel) Otomatis</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Buku Pembantu Pajak & Inventaris Aset</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Cetak Master Bundle SPJ 1-Klik</li>
+                        <li><i class="fas fa-check text-[#d4a038] mr-2"></i> Grafik Analitik & Penguncian Periode</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20SmartSPJ%20BOSP%20Versi%20PRO" target="_blank" class="block w-full text-center bg-gradient-to-r from-[#d4a038] to-[#b8862d] hover:from-[#b8862d] hover:to-[#9a6b16] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-[#d4a038]/30 transition-all border border-[#fde08d]/50 mt-auto">Pesan Versi Pro</a>
+                </div>
+
+                <!-- Standar -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-sm transition hover:shadow-md h-full flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">SmartSPJ Standar</h3>
+                    <div class="mb-6">
+                        <span class="text-sm font-semibold text-slate-400 line-through mr-2">Rp 100.000</span>
+                        <div class="text-4xl font-black text-[#034f46] dark:text-emerald-400">Rp 35.000</div>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-3 mb-8 text-left flex-grow">
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> <b>Semua Fitur Versi Basic</b></li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Laporan Realisasi K7 Lengkap</li>
+                        <li><i class="fas fa-check text-emerald-600 dark:text-emerald-400 mr-2"></i> Buku Pembantu Kas & Bank</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Buku Pajak & Inventaris Aset</li>
+                        <li><i class="fas fa-times text-rose-500 dark:text-rose-400 mr-2"></i> Tanpa Tarik RKAS & Master Bundle</li>
+                    </ul>
+                    <a href="https://wa.me/6285217000948?text=Halo%20Admin%20ASLAM%20DigiArtha,%20saya%20ingin%20memesan%20SmartSPJ%20BOSP%20Versi%20Standar" target="_blank" class="block w-full text-center bg-emerald-50 dark:bg-emerald-950/40 text-[#034f46] dark:text-emerald-400 font-bold py-3 rounded-xl hover:bg-[#034f46] hover:text-white dark:hover:bg-emerald-500 dark:hover:text-slate-950 transition-colors border border-emerald-200 dark:border-emerald-800 mt-auto">Pesan Versi Standar</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-center text-xs">
-        <p>&copy; 2026 <strong>ASLAM DigiArtha</strong>. Hak Cipta Dilindungi Undang-Undang. (Garansi 100% Uang Kembali).</p>
-        <div class="mt-4">
-            <a href="index.html" class="text-secondary hover:underline">← Kembali ke Beranda Toko Utama</a>
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                <p class="text-xs sm:text-sm text-slate-400">&copy; 2026 <strong class="text-[#f3c663]">ASLAM DigiArtha</strong> — Pusat Produk Digital. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex items-center space-x-3.5 text-lg">
+                    <a href="index.html" class="text-sm font-semibold text-[#f3c663] hover:underline transition">← Kembali ke Katalog Utama</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Script Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            const htmlRoot = document.getElementById('htmlRoot');
+            const modeIcon = document.getElementById('modeIcon');
+            if (htmlRoot.classList.contains('dark')) {
+                htmlRoot.classList.remove('dark');
+                modeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                htmlRoot.classList.add('dark');
+                modeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+    </script>
 </body>
 </html>
