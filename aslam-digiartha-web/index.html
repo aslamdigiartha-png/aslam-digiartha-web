@@ -310,4 +310,466 @@
           <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
           <img src="flyer_bukuinduk.png" alt="Buku Induk Siswa" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-address-book text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
         </div>
-        <div class="p-6 sm:p-8 flex-1
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-bukuinduk', 'Buku Induk Siswa & Arsip Digital')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Buku Induk Siswa & Arsip Digital</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 25.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Arsip data terpadu siswa sekolah/madrasah digital.</p>
+          </div>
+          <a href="landing-bukuinduk.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 4. Penjadwalan Pelajaran -->
+      <div id="prod-jadwal" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="sekolah" data-name="penjadwalan pelajaran">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
+          <img src="flyer_jadwal.png" alt="Penjadwalan Pelajaran" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-calendar-alt text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-jadwal', 'Penjadwalan Pelajaran Otomatis')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Penjadwalan Pelajaran Otomatis</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 20.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Software pintar penyusun jadwal sekolah anti-bentrok.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 5. LPJ BOSP -->
+      <div id="prod-bosp" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="keuangan" data-name="lpj bosp">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
+          <img src="flyer_bosp.jpg" alt="LPJ BOSP" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-file-invoice-dollar text-[#d4a038] text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-bosp', 'Aplikasi LPJ BOSP (SmartSPJ)')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Aplikasi LPJ BOSP (SmartSPJ)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 25.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Software penyusunan Laporan Pertanggungjawaban Dana BOSP.</p>
+          </div>
+          <a href="landing-bosp.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 6. Kas RT & Masjid -->
+      <div id="prod-kasrt" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="keuangan" data-name="kas rt masjid">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
+          <img src="flyer_kasrt.png" alt="Kas RT & Masjid Digital" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-mosque text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-kasrt', 'Manajemen Kas RT & Masjid')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Manajemen Kas RT & Masjid</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Seikhlasnya / Mulai Rp 15.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Pencatatan iuran warga dan laporan keuangan transparan.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="http://lynk.id/aslamdigiartha/6rodwxd4pngg/checkout" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 7. Mawarist -->
+      <div id="prod-mawarist" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="syariah" data-name="mawarist">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
+          <img src="flyer_mawarist.png" alt="Mawarist Syariah" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-scale-balanced text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-mawarist', 'Aplikasi Kalkulator Mawarist')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Aplikasi Kalkulator Mawarist</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 10.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">E-book & aplikasi otomatis pembagian waris hukum Islam.</p>
+          </div>
+          <a href="landing-mawarist.html" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><span>Lihat Detail & Varian</span><i class="fas fa-arrow-right text-[#fde08d]"></i></a>
+        </div>
+      </div>
+
+      <!-- 8. Ratib -->
+      <div id="prod-ratib" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="syariah" data-name="ratib al-haddad">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg shadow-sm">E-Book Digital</span>
+          <img src="flyer_ratib.png" alt="Ratib Al-Haddad" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-quran text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-ratib', 'E-Book Ratib Al-Haddad')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">E-Book Ratib Al-Haddad</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Seikhlasnya</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Kumpulan wirid terjemahan PDF resolusi tinggi.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 9. Kalkulator Zakat -->
+      <div id="prod-zakat" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="syariah" data-name="kalkulator zakat">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#034f46] text-[#fde08d] font-bold px-2.5 py-1 rounded-lg shadow-sm">Aplikasi Sistem</span>
+          <img src="flyer_zakat.png" alt="Kalkulator Zakat" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-hand-holding-heart text-[#d4a038] text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-zakat', 'Kalkulator Zakat Penghasilan')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Kalkulator Zakat Penghasilan</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 20.000</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Perhitungan otomatis nisab zakat secara instan dan syar'i.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+      
+      <!-- 10. Khutbah -->
+      <div id="prod-khutbah" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="syariah" data-name="e-book khutbah">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg shadow-sm">E-Book Digital</span>
+          <img src="flyer_khutbah.png" alt="E-Book Khutbah" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-microphone-alt text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-khutbah', 'E-Book Khutbah (Sunda & Indonesia)')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">E-Book Khutbah (Sunda & Indonesia)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Gratis</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Naskah khutbah Jumat, Idul Adha, dwibahasa.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 11. Prakata MC -->
+      <div id="prod-mc" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="umum" data-name="e-book prakata mc">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg shadow-sm">E-Book Digital</span>
+          <img src="flyer_mc.png" alt="E-Book Prakata MC" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-bullhorn text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-mc', 'E-Book Prakata MC')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">E-Book Prakata MC</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Bayar Seikhlasnya</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Panduan lengkap naskah pembuka MC profesional.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+
+      <!-- 12. Biantara -->
+      <div id="prod-biantara" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="umum" data-name="biantara seren tampi">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#b8862d] text-white font-bold px-2.5 py-1 rounded-lg shadow-sm">E-Book Digital</span>
+          <img src="flyer_biantara.png" alt="Biantara Seren Tampi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('i'), {className: 'fas fa-ring text-[#d4a038] text-6xl group-hover:scale-110 transition duration-300'}));">
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-biantara', 'Biantara Seren Tampi (Sunda)')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Biantara Seren Tampi (Sunda)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Bayar Seikhlasnya</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-4">Naskah pidato penyerahan pengantin adat Sunda.</p>
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Langsung Unduh</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+      <p class="text-slate-600 dark:text-slate-300 text-sm max-w-xl mx-auto">Penjelasan lengkap mengenai sistem pembayaran otomatis <strong>Lynk.Id</strong>.</p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(0)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 flex justify-between items-center focus:outline-none">
+          <span>1. Apa maksud skema produk Free, Bayar Seikhlasnya, dan Berbayar?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663]" id="faqIcon0"></i>
+        </button>
+        <div id="faqContent0" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-sm border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Free (Gratis Rp 0):</strong> Produk dasar yang diunduh cuma-cuma.</li>
+            <li><strong>Bayar Seikhlasnya:</strong> Nominal pembayaran sesuai keikhlasan.</li>
+            <li><strong>Berbayar:</strong> Pembelian harga tetap untuk fitur penuh.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden" id="faq-garansi">
+        <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 flex justify-between items-center focus:outline-none">
+          <span>2. Bagaimana Syarat & Ketentuan Garansi 100% Uang Kembali?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663]" id="faqIcon1"></i>
+        </button>
+        <div id="faqContent1" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-sm border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Klaim maksimal 7 hari sejak pembelian.</li>
+            <li>Jika aplikasi terbukti mengalami error sistem fatal, dana dikembalikan 100% utuh tanpa potongan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 flex justify-between items-center focus:outline-none">
+          <span>3. Bagaimana cara pembayaran otomatis via Lynk.Id?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663]" id="faqIcon2"></i>
+        </button>
+        <div id="faqContent2" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-sm border-t border-slate-200 dark:border-slate-800">
+          Klik tombol <strong>"Beli & Download Otomatis"</strong>. Setelah sukses, file langsung terunduh detik itu juga di layar dan email Anda.
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>4. Apa perbedaan jenis aplikasi Basic, Standar, dan Profesional?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon3"></i>
+        </button>
+        <div id="faqContent3" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Varian Basic:</strong> Fitur inti paling mendasar untuk pencatatan sederhana dan cepat.</li>
+            <li><strong>Varian Standar:</strong> Fitur operasional harian lengkap beserta rekapitulasi laporan otomatis siap cetak.</li>
+            <li><strong>Varian Profesional (Pro):</strong> Edisi terlengkap dengan kustomisasi identitas/logo instansi, cetak struk/kartu otomatis, grafik analitik, & prioritas support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span class="flex items-center gap-2"><i class="fab fa-youtube text-rose-600 text-lg"></i><span>5. Di mana saya bisa melihat tutorial cara penggunaan aplikasinya?</span></span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon4"></i>
+        </button>
+        <div id="faqContent4" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          Seluruh tutorial penggunaan aplikasi—mulai dari instalasi hingga cetak laporan—dapat ditonton gratis di <strong>Channel YouTube Resmi ASLAM DigiArtha</strong>. Anda juga dapat bertanya langsung pada <strong>Asisten AI</strong> di pojok kanan bawah layar.
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(5)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>6. Bagaimana jika laptop/HP saya ganti baru atau di-install ulang? Apakah data aman?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon5"></i>
+        </button>
+        <div id="faqContent5" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          Anda tidak perlu membeli ulang! Setiap aplikasi dilengkapi fitur <strong>Backup & Restore Data</strong> (Ekspor/Impor), dan link unduhan dari <strong>Lynk.Id</strong> tersimpan permanen di email Anda untuk diunduh ulang kapan saja.
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+        <button onclick="toggleFaq(6)" class="w-full p-5 text-left font-bold text-slate-900 dark:text-white bg-slate-50 dark:bg-slate-800/70 text-sm sm:text-base flex justify-between items-center focus:outline-none">
+          <span>7. Berapa spesifikasi minimal Komputer, Laptop, HP Android, Tablet, iPad, dan iPhone?</span>
+          <i class="fas fa-chevron-down text-[#034f46] dark:text-[#f3c663] transition-transform duration-300" id="faqIcon6"></i>
+        </button>
+        <div id="faqContent6" class="hidden px-5 py-4 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-200 dark:border-slate-800">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>Komputer / Laptop (Windows / Mac):</strong> Minimal RAM 2 GB (rekomendasi 4 GB), mendukung Microsoft Excel atau browser modern (Chrome/Edge/Firefox).</li>
+            <li><strong>HP Android / Tablet / iPad / iPhone:</strong> Minimal RAM 2 GB, Android 7.0+ / iOS 12.0+, browser Chrome/Safari terbaru, serta pembaca PDF standar untuk E-Book.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-14 border-t border-slate-800 transition-colors duration-300" id="footerRoot">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-10 border-b border-slate-800">
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <a href="#" class="bg-white px-4 py-2 rounded-2xl shadow-md border-2 border-[#d4a038]/50 inline-flex items-center justify-center hover:scale-[1.02] transition">
+            <img src="logo_ASLAM_DigiArtha.png" alt="ASLAM DigiArtha" loading="lazy" class="h-10 sm:h-11 w-auto max-w-[220px] object-contain" onerror="this.style.display='none'; document.getElementById('footerTextLogo').classList.remove('hidden'); document.getElementById('footerTextLogo').classList.add('flex');">
+            <div id="footerTextLogo" class="hidden items-center space-x-2 py-0.5"><span class="font-extrabold text-lg tracking-tight"><span class="text-[#034f46] font-black">ASLAM</span> <span class="text-[#d4a038]">DigiArtha</span></span></div>
+          </a>
+          <div class="sm:border-l sm:border-slate-800 sm:pl-4">
+            <div class="text-white font-bold text-sm sm:text-base">ASLAM DigiArtha</div>
+            <div class="text-xs text-[#f3c663] font-medium tracking-wide">Pusat Produk Digital Otomatis (Partner Resmi Lynk.Id)</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3.5 text-lg">
+          <a href="https://www.facebook.com/profile.php?id=61595459763084&locale=id_ID" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/aslamdigiartha/" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@aslam.digiartha?is_from_webapp=1&sender_device=pc" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#d4a038] hover:text-white hover:border-[#d4a038] transition" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-rose-600 hover:text-white hover:border-rose-600 transition" title="YouTube Resmi"><i class="fab fa-youtube"></i></a>
+          <button onclick="openAiChat()" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:bg-[#034f46] hover:text-white hover:border-[#d4a038] transition" title="Asisten AI"><i class="fas fa-robot"></i></button>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-center sm:text-left">
+        <p class="text-xs sm:text-sm text-slate-400">&copy; 2026 <strong class="text-[#f3c663]">ASLAM DigiArtha</strong> — Pusat Produk Digital. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+          <a href="#produk" class="hover:text-[#f3c663] transition">Katalog</a>
+          <a href="#skema" class="hover:text-[#f3c663] transition">Skema & Varian</a>
+          <a href="https://www.youtube.com/channel/UCJOXkhBn_kZryAzyFWPsjIw" target="_blank" class="hover:text-rose-400 transition">YouTube Resmi</a>
+          <a href="#faq" class="hover:text-[#f3c663] transition">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Smart AI Chat Widget (Pojok Kanan Bawah) -->
+  <div class="fixed bottom-6 right-6 z-50 font-sans">
+    <div id="aiChatWindow" class="hidden mb-4 w-[335px] sm:w-[390px] bg-white dark:bg-slate-900 border-2 border-[#d4a038]/60 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+      <div class="bg-aslam-gradient p-4 text-white flex justify-between items-center border-b border-[#d4a038]/30">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-2xl bg-white/15 border border-[#fde08d]/50 flex items-center justify-center text-[#fde08d] text-lg"><i class="fas fa-robot"></i></div>
+          <div>
+            <h4 class="font-bold text-sm text-white flex items-center gap-1.5">Asisten AI ASLAM DigiArtha</h4>
+            <p class="text-[11px] text-emerald-200">Online 24 Jam</p>
+          </div>
+        </div>
+        <button onclick="toggleAiChat()" class="text-white/80 hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition" title="Tutup Chat"><i class="fas fa-times text-lg"></i></button>
+      </div>
+
+      <div id="aiChatMessages" class="p-4 h-80 overflow-y-auto space-y-3 bg-slate-50 dark:bg-slate-950/80 text-xs">
+        <div class="flex items-start space-x-2.5">
+          <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3.5 rounded-2xl rounded-tl-none shadow-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+            Assalamu'alaikum! 👋 <strong>Selamat datang di ASLAM DigiArtha</strong>. Saya Asisten AI yang siap membantu menjawab pertanyaan Anda.
+          </div>
+        </div>
+        <div class="pl-9 flex flex-wrap gap-1.5 pt-1" id="quickReplies">
+          <button onclick="askAi('Daftar 12 Produk')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">📦 Daftar Produk & Harga</button>
+          <button onclick="askAi('Cara Beli Otomatis')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">⚡ Cara Beli Otomatis</button>
+          <button onclick="askAi('Perbedaan Varian')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">💎 Varian Harga</button>
+        </div>
+      </div>
+      <form onsubmit="handleUserChat(event)" class="p-3 bg-white dark:bg-slate-900 flex items-center space-x-2">
+        <input type="text" id="aiChatInput" placeholder="Ketik pertanyaan..." class="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white border-none rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#034f46]">
+        <button type="submit" class="bg-aslam-button text-white w-9 h-9 rounded-xl shadow-md flex-shrink-0"><i class="fas fa-paper-plane text-xs text-[#fde08d]"></i></button>
+      </form>
+    </div>
+    <button onclick="toggleAiChat()" class="bg-aslam-button text-white px-4 py-3.5 rounded-full flex items-center space-x-2.5 shadow-xl hover:scale-105 border-2 border-[#d4a038] ml-auto">
+      <i class="fas fa-robot text-xl text-[#fde08d]" id="chatTriggerIcon"></i>
+      <span class="text-xs sm:text-sm font-bold tracking-wide">Chat Asisten AI</span>
+    </button>
+  </div>
+
+  <!-- Toast Notifikasi Copy Link -->
+  <div id="toastCopy" class="fixed top-24 right-6 z-[60] bg-slate-900 text-white px-5 py-4 rounded-xl shadow-2xl transition-all duration-300 translate-x-full opacity-0 flex items-center space-x-3.5 border border-[#d4a038]/50">
+    <i class="fas fa-check-circle text-emerald-400 text-2xl"></i>
+    <div>
+      <p class="text-sm font-bold text-white mb-0.5">Berhasil Disalin!</p>
+      <p class="text-xs text-slate-300">Teks copywriting & link spesifik siap dibagikan.</p>
+    </div>
+  </div>
+
+  <script>
+    // FUNGSI COPY-TO-CLIPBOARD + TOAST
+    function showCopyToast() {
+      const toast = document.getElementById('toastCopy');
+      toast.classList.remove('translate-x-full', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-x-full', 'opacity-0');
+      }, 3500);
+    }
+
+    function shareProduct(productId, productName) {
+      // PENTING: Ganti "https://domainanda.com/" dengan DOMAIN ASLI website toko Anda
+      // Pastikan berawalan https:// agar link otomatis berwarna biru & bisa diklik di WA/Medsos
+      const baseUrl = "https://domainanda.com/"; 
+      const productUrl = baseUrl + '#' + productId;
+      
+      // Susun Copywriting
+      const copyText = `🔥 Tingkatkan efisiensi & produktivitas dengan *${productName}* dari ASLAM DigiArtha!\n\n✅ Sekali beli akses selamanya\n✅ Unduh file instan 24 Jam via Lynk.Id\n✅ Garansi 100% uang kembali\n\nYuk, cek detail dan dapatkan produknya sekarang juga di tautan berikut:\n👉 ${productUrl}`;
+      
+      // Jalankan perintah Copy
+      navigator.clipboard.writeText(copyText).then(() => {
+        showCopyToast();
+      }).catch(err => {
+        alert('Teks promosi gagal disalin. Silakan copy manual URL browser Anda.');
+      });
+    }
+
+    function toggleFaq(index) {
+      const content = document.getElementById('faqContent' + index);
+      const icon = document.getElementById('faqIcon' + index);
+      content.classList.toggle('hidden');
+      icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    function toggleDarkMode() {
+      document.getElementById('htmlRoot').classList.toggle('dark');
+    }
+
+    function filterCategory(category) {
+      const cards = document.getElementsByClassName('product-card');
+      for (let card of cards) {
+        const cat = card.getAttribute('data-category');
+        card.style.display = (category === 'all' || cat === category) ? "flex" : "none";
+      }
+    }
+
+    function toggleAiChat() {
+      document.getElementById('aiChatWindow').classList.toggle('hidden');
+    }
+
+    function openAiChat() {
+      document.getElementById('aiChatWindow').classList.remove('hidden');
+    }
+
+    function askAi(topic) { handleAiResponse(topic); }
+    function handleUserChat(e) {
+      e.preventDefault();
+      const input = document.getElementById('aiChatInput');
+      if(input.value.trim()) handleAiResponse(input.value.trim());
+      input.value = '';
+    }
+
+    function handleAiResponse(text) {
+      const container = document.getElementById('aiChatMessages');
+      container.insertAdjacentHTML('beforeend', `<div class="flex justify-end"><div class="bg-[#034f46] text-white p-3 rounded-2xl rounded-tr-none text-xs">${text}</div></div>`);
+      setTimeout(() => {
+        let reply = "Pesan otomatis via platform Lynk.Id akan memudahkan pengiriman file instan tanpa antrean. Silakan klik tombol 'Beli & Download Otomatis' di etalase.";
+        if (text.includes("12")) reply = "Kami memiliki 12 produk aktif: KasirKu, Tabungan Murid, Buku Induk, Penjadwalan, LPJ BOSP, Kas RT, Mawarist, Zakat, Khutbah, Prakata MC, dan Biantara.";
+        container.insertAdjacentHTML('beforeend', `<div class="flex items-start space-x-2.5"><div class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 p-3.5 rounded-2xl rounded-tl-none shadow-sm text-xs">${reply}</div></div>`);
+        container.scrollTop = container.scrollHeight;
+      }, 500);
+    }
+  </script>
+</body>
+</html>
