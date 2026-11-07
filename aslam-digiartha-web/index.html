@@ -252,11 +252,14 @@
     <!-- Pencarian & Filter Kategori -->
     <div class="max-w-5xl mx-auto mb-12 px-2">
       <div class="flex flex-wrap gap-2.5 justify-center">
-        <button onclick="filterCategory('all')" id="btn-all" class="category-btn bg-aslam-button text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-md transition">Semua Produk (12)</button>
+        <button onclick="filterCategory('all')" id="btn-all" class="category-btn bg-aslam-button text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-md transition">Semua Produk (14)</button>
         <button onclick="filterCategory('pos')" id="btn-pos" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Software & POS UMKM</button>
         <button onclick="filterCategory('sekolah')" id="btn-sekolah" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Administrasi Sekolah</button>
         <button onclick="filterCategory('keuangan')" id="btn-keuangan" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Keuangan & BOSP</button>
         <button onclick="filterCategory('syariah')" id="btn-syariah" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Keagamaan & Syariah</button>
+        <!-- Tambahan Filter -->
+        <button onclick="filterCategory('undangan')" id="btn-undangan" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Undangan Digital</button>
+        <button onclick="filterCategory('paket-sekolah')" id="btn-paket-sekolah" class="category-btn bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-xl text-xs font-semibold hover:border-[#034f46] transition">Paket Hemat Sekolah</button>
       </div>
     </div>
 
@@ -521,6 +524,85 @@
           <a href="https://lynk.id/" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2"><i class="fas fa-shopping-bag text-[#fde08d]"></i><span>Beli & Download Otomatis</span></a>
         </div>
       </div>
+      
+      <!-- 13. Pesan Undangan Digital Premium -->
+      <div id="prod-undangan" class="product-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-sm" data-category="undangan" data-name="jasa pembuatan undangan digital pernikahan khitanan ulang tahun">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-[#d4a038] text-slate-950 font-bold px-2.5 py-1 rounded-lg shadow-sm">Jasa Digital Custom</span>
+          <!-- Icon Placeholder / Flyer Undangan -->
+          <i class="fas fa-envelope-open-text text-[#034f46] dark:text-emerald-400 text-6xl group-hover:scale-110 transition duration-300"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-undangan', 'Jasa Pembuatan Undangan Digital Elegan')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Pesan Undangan Digital (Web/Video)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Mulai Rp 49.000 • Acara Bebas</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-3">Solusi elegan untuk Pernikahan, Khitanan, Ulang Tahun, Tasyakuran & Wisuda.</p>
+            
+            <!-- Fitur Utama -->
+            <ul class="text-[11px] text-slate-500 dark:text-slate-400 space-y-1 mb-4">
+              <li><i class="fas fa-check text-emerald-500 mr-1.5"></i> Custom Nama Tamu Tanpa Batas</li>
+              <li><i class="fas fa-check text-emerald-500 mr-1.5"></i> Integrasi Google Maps, RSVP & Buku Tamu</li>
+              <li><i class="fas fa-check text-emerald-500 mr-1.5"></i> Hitung Mundur, Galeri Foto & Musik Latar</li>
+            </ul>
+
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-clock text-[#b8862d] mr-1"></i> Pengerjaan 1x24 Jam</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-mobile-screen mr-1"></i>Responsif HP</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/aslamdigiartha" target="_blank" class="w-full bg-aslam-button text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2">
+            <i class="fas fa-paper-plane text-[#fde08d]"></i>
+            <span>Pilih Tema & Pesan Sekarang</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 14. Paket Bundle Aplikasi Sekolah Super Hemat -->
+      <div id="prod-paket-sekolah" class="product-card bg-white dark:bg-slate-900 border-2 border-[#d4a038]/60 rounded-3xl overflow-hidden flex flex-col border-aslam-glow shadow-md" data-category="paket-sekolah" data-name="paket hemat aplikasi sekolah lpj bosp tabungan murid jadwal pintar buku induk">
+        <div class="bg-gradient-to-br from-emerald-50 via-white to-amber-50/50 dark:from-slate-800 dark:to-slate-800/50 aspect-square relative flex items-center justify-center overflow-hidden group">
+          <span class="absolute top-4 left-4 z-10 text-[10px] bg-rose-600 text-white font-extrabold px-2.5 py-1 rounded-lg shadow-sm">HEMAT HINGGA 40%</span>
+          <!-- Icon Placeholder / Flyer Bundle Sekolah -->
+          <i class="fas fa-school-flag text-[#d4a038] text-6xl group-hover:scale-110 transition duration-300"></i>
+        </div>
+        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between relative">
+          <button onclick="shareProduct('prod-paket-sekolah', 'Paket Bundle Aplikasi Sekolah Lengkap Hemat')" class="absolute top-6 right-6 text-slate-400 hover:text-[#034f46] dark:hover:text-[#f3c663] transition bg-slate-100 dark:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700" title="Salin Teks Promo & Link">
+            <i class="fas fa-share-nodes"></i>
+          </button>
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[11px] line-through text-slate-400">Rp 120.000</span>
+              <span class="text-xs bg-emerald-100 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded font-bold">Bundling</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2 pr-8">Paket Pintar Sekolah Lengkap (All-in-One)</h3>
+            <p class="text-[#b8862d] dark:text-amber-400 font-extrabold text-xs mb-3">Hanya Rp 69.900 (Lisensi Selamanya)</p>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mb-3">Paket komplit 4 software administrasi esensial untuk sekolah & madrasah.</p>
+            
+            <!-- Rincian Isi Paket -->
+            <div class="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-2xl border border-slate-200/70 dark:border-slate-700 mb-4">
+              <p class="text-[11px] font-bold text-slate-800 dark:text-slate-200 mb-1.5"><i class="fas fa-box-open text-[#d4a038] mr-1"></i> Berisi 4 Software Siap Pakai:</p>
+              <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-1">
+                <li>1. Aplikasi LPJ BOSP (SmartSPJ)</li>
+                <li>2. Aplikasi Tabungan Murid Otomatis</li>
+                <li>3. Aplikasi Jadwal Pelajaran Pintar (Anti-Bentrok)</li>
+                <li>4. Software Buku Induk Siswa Digital</li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-between text-[11px] text-[#034f46] dark:text-emerald-300 font-semibold mb-6 bg-amber-50/80 dark:bg-amber-950/30 px-3 py-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/40">
+              <span><i class="fas fa-bolt text-[#b8862d] mr-1"></i> Otomatis Lynk</span>
+              <span class="text-[#9a6b16] dark:text-amber-400 font-bold"><i class="fas fa-download mr-1"></i>Paket .ZIP Instan</span>
+            </div>
+          </div>
+          <a href="https://lynk.id/aslamdigiartha" target="_blank" class="w-full bg-aslam-direct text-white py-3.5 rounded-xl font-bold transition text-xs text-center flex items-center justify-center space-x-2">
+            <i class="fas fa-cart-arrow-down text-[#fde08d]"></i>
+            <span>Beli Bundle & Hemat 40%</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -673,7 +755,7 @@
           </div>
         </div>
         <div class="pl-9 flex flex-wrap gap-1.5 pt-1" id="quickReplies">
-          <button onclick="askAi('Daftar 12 Produk')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">📦 Daftar Produk & Harga</button>
+          <button onclick="askAi('Daftar Produk')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">📦 Daftar Produk & Harga</button>
           <button onclick="askAi('Cara Beli Otomatis')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">⚡ Cara Beli Otomatis</button>
           <button onclick="askAi('Perbedaan Varian')" class="bg-emerald-50 dark:bg-emerald-950/60 text-[#034f46] dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3 py-1.5 rounded-xl text-[11px] font-semibold">💎 Varian Harga</button>
         </div>
@@ -715,7 +797,14 @@
       const productUrl = baseUrl + '#' + productId;
       
       // Susun Copywriting
-      const copyText = `🔥 Tingkatkan efisiensi & produktivitas dengan *${productName}* dari ASLAM DigiArtha!\n\n✅ Sekali beli akses selamanya\n✅ Unduh file instan 24 Jam via Lynk.Id\n✅ Garansi 100% uang kembali\n\nYuk, cek detail dan dapatkan produknya sekarang juga di tautan berikut:\n👉 ${productUrl}`;
+      const copyText = `🔥 Tingkatkan efisiensi & produktivitas dengan *${productName}* dari ASLAM DigiArtha!
+
+✅ Sekali beli akses selamanya
+✅ Unduh file instan 24 Jam via Lynk.Id
+✅ Garansi 100% uang kembali
+
+Yuk, cek detail dan dapatkan produknya sekarang juga di tautan berikut:
+👉 ${productUrl}`;
       
       // Jalankan perintah Copy
       navigator.clipboard.writeText(copyText).then(() => {
@@ -765,7 +854,17 @@
       container.insertAdjacentHTML('beforeend', `<div class="flex justify-end"><div class="bg-[#034f46] text-white p-3 rounded-2xl rounded-tr-none text-xs">${text}</div></div>`);
       setTimeout(() => {
         let reply = "Pesan otomatis via platform Lynk.Id akan memudahkan pengiriman file instan tanpa antrean. Silakan klik tombol 'Beli & Download Otomatis' di etalase.";
-        if (text.includes("12")) reply = "Kami memiliki 12 produk aktif: KasirKu, Tabungan Murid, Buku Induk, Penjadwalan, LPJ BOSP, Kas RT, Mawarist, Zakat, Khutbah, Prakata MC, dan Biantara.";
+        
+        if (text.includes("12") || text.toLowerCase().includes("produk")) {
+          reply = "Kami memiliki katalog lengkap: Sistem KasirKu, Tabungan Murid, Buku Induk Siswa, Penjadwalan Pelajaran, LPJ BOSP, Kas RT/Masjid, Mawarist, Kalkulator Zakat, E-Book Syariah, **Jasa Undangan Digital Custom**, serta **Paket Hemat Aplikasi Sekolah All-in-One**!";
+        }
+        if (text.toLowerCase().includes("undangan")) {
+          reply = "Layanan Undangan Digital kami mencakup Pernikahan, Khitanan, Ulang Tahun, dan Wisuda dengan harga mulai Rp 49.000. Lengkap dengan fitur musik, peta navigasi, buku tamu, dan nama tamu tak terbatas!";
+        }
+        if (text.toLowerCase().includes("paket") || text.toLowerCase().includes("sekolah")) {
+          reply = "Paket Pintar Sekolah All-in-One menggabungkan Aplikasi BOSP, Tabungan Siswa, Jadwal Pelajaran Pintar, dan Buku Induk dengan diskon bundle 40% (hanya Rp 69.900 sekali beli selamanya).";
+        }
+        
         container.insertAdjacentHTML('beforeend', `<div class="flex items-start space-x-2.5"><div class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 p-3.5 rounded-2xl rounded-tl-none shadow-sm text-xs">${reply}</div></div>`);
         container.scrollTop = container.scrollHeight;
       }, 500);
